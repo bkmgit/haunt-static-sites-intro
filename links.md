@@ -4,4 +4,5 @@ any links that you are not going to use.
  -->
 
 [haunt]: https://dthompson.us/projects/haunt.html
+[haunt-static-site-intro-issues]: https://github.com/bkmgit/haunt-static-sites-intro/issues
 [guile]: https://www.gnu.org/software/guile/
