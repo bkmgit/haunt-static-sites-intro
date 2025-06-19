@@ -479,7 +479,9 @@ next to each post in the list.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Exercise: Reusable Post List
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge: Reusable Post List
 
 A list of blog posts is exactly the kind of component we are likely to want to
 use in multiple places throughout the site.

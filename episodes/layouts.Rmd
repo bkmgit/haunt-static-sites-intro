@@ -93,7 +93,7 @@ tag is still present in `index.md`.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Exercise: Cleaning Up
+## Challenge: Cleaning Up
 
 Remove the include tag for navigation links from all the pages of your site (e.g. `about.md`),
 and set every page to use the `default` layout.
@@ -200,7 +200,7 @@ each page includes the page title displayed twice.
 
 :::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::::::`
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 Note that we have also included some additional HTML elements in our default layout - the display of the
 page title as level-one heading and wrapping the main page content within `<section>` and `</section>` tags.
