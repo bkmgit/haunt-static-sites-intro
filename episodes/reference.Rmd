@@ -1,6 +1,15 @@
 ---
-layout: reference
+title: "References"
+teaching: 0
+exercises: 0
 ---
+
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- What common terms are relevant to this lesson?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Glossary
 
