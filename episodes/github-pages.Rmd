@@ -7,16 +7,14 @@ exercises: 20
 :::::::::::::::::::::::::::::::::::::: questions
 
 - "How do I publish my page or a website on the Web via GitHub?"
-objectives:
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: objectives
+
 - "Publish Markdown files as HTML on the Web with GitHub Pages"
-keypoints:
-- "GitHub Pages is a static site hosting service that takes files in various formats
-  (Markdown, HTML, CSS, JavaScript, etc.)
-  straight from a repository on GitHub, runs them through its website engine Jekyll, builds them into a website,
-  and publishes them on the Web"
-- "By convention, if you create a branch called `gh-pages` in your repository, it will automatically be published as a website by GitHub"
-- "You can configure any branch of a repository to be used for website (it does not have to be `gh-pages`)"
-- "GitHub publishes websites on special URLs formatted as 'https://GITHUB_USERNAME.github.io/REPOSITORY_NAME'"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -271,3 +269,15 @@ Note that the URL has '/about' appended to it - you can use this URL to access t
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- "GitHub Pages is a static site hosting service that takes files in various formats
+  (Markdown, HTML, CSS, JavaScript, etc.)
+  straight from a repository on GitHub, runs them through its website engine Jekyll, builds them into a website,
+  and publishes them on the Web"
+- "By convention, if you create a branch called `gh-pages` in your repository, it will automatically be published as a website by GitHub"
+- "You can configure any branch of a repository to be used for website (it does not have to be `gh-pages`)"
+- "GitHub publishes websites on special URLs formatted as 'https://GITHUB_USERNAME.github.io/REPOSITORY_NAME'"
+
+::::::::::::::::::::::::::::::::::::::::::::::::
