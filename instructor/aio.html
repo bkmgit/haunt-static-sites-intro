@@ -277,6 +277,30 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="skribe.html">4. Authoring With Skribe</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="reference.html">5. References</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -481,7 +505,7 @@ web][www-wikipedia].</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">HTML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -623,7 +647,7 @@ sections</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li><ol style="list-style-type: decimal">
@@ -1492,7 +1516,460 @@ wrong”</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section>
+</section></section><section id="aio-skribe"><p>Content from <a href="skribe.html">Authoring With Skribe</a></p>
+<hr>
+<p>Last updated on 2025-06-24 |
+
+        <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/skribe.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>“How can I write content for my webpages?”</li>
+<li>“How do I link to other pages?”</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>“Create simple pages with formatted text”</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level1">
+<h1 id="skribe">Skribe<a class="anchor" aria-label="anchor" href="#skribe"></a>
+</h1>
+<p>Skribe is a language used to enable writing documents that can be
+output in a variety of formats include HTML. Plain text characters and
+parenthesis are used in place of HTML tags. These characters are then
+processed by Haunt (or another script or application) and transformed
+into HTML. Skribe separates content from layout and formatting details
+which are handled by a program. Frequently used elements, like headings,
+paragraphs, lists, tables and text formatting (i.e. bold, italic) are
+part of Skribe. Skribe’s simplified syntax keeps content human-readable.
+Skribe’s power comes from the ability to use Scheme to automate and
+customize the websites you create relieving you of tedious repetitive
+work.</p>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Challenge: Learn more about Skribe</p>
+<p>Read through the <a href="https://www-sop.inria.fr/members/Manuel.Serrano/publi/jfp05/article.html" class="external-link">paper</a>
+introducing Skribe.</p>
+<ul>
+<li>What features make Skribe attractive?</li>
+<li>What are some output formats that have been programmed to be
+generated from Skribe?</li>
+<li>What is type checking and why might it be helpful? What drawbacks
+does type checking have?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<ul>
+<li>Skribe uses scheme to allow one to create a compact notation that
+describes writer intent for formatting. Skribe allows one to use code to
+create documents that can be output in multiple formats.</li>
+<li>Skribe documents can be output to HTML, TexInfo and through LaTeX to
+PDF.</li>
+<li>A <a href="https://en.wikipedia.org/wiki/Type_system" class="external-link">type
+system</a> is a way of associating a set of properties to variables in a
+program. It is similar to how units are assigned to physical quantities,
+for example one might measure length in meters and speed in meters per
+second. Types allow programs to prevent some errors - for example it can
+be reasonable to add two distances, but it is not reasonable to add a
+distance to a speed. It is however reasonable to calculate a speed
+knowing distance travelled in a certain time. Type checking can increase
+the time it takes for a program to be compiled and/or run as extra
+operations are needed to verify the rules associated to each type are
+satisfied.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level1">
+<h1 id="where-to-start-writing-skribe">Where to Start Writing Skribe?<a class="anchor" aria-label="anchor" href="#where-to-start-writing-skribe"></a>
+</h1>
+<p>When editing Skribe source code, many editors will help you by
+highlighting matching brackets and parenthesis. You can also customize
+text editors you install on your own hardware to provide additional
+features, such as highlighting.</p>
+<p>As we are working towards authoring websites using Haunt and GitHub
+pages, we will use GitHub straight away for learning the basics of
+Skribe. The GitHub project you created in contains a file
+<code>my-first-post.skr</code>.</p>
+<p>TODO: Add image</p>
+<p>Click on that pencil symbol to open an editing interface of your
+project’s <code>my-first-post.skr</code> file. Once we’ve clicked the
+pencil symbol, GitHub will open that file in the editing interface.</p>
+<p>TODO: Add image</p>
+<p>Let us change the content by modifying <code>written in Skribe</code>
+to <code>written in (bold Skribe)</code>. Examine the rendered view by
+clicking the <em>Preview changes</em> tab.</p>
+<p>TODO: Add image</p>
+<p>GitHub shows green vertical bars visually highlighting the new
+content. To save the content to the file <code>my-first-post.skr</code>,
+search for a <em>Commit changes</em> button. After having changed
+something, the commit menu looks like this:</p>
+<p>TODO: Add image</p>
+<div id="writing-a-commit-message" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="writing-a-commit-message" class="callout-inner">
+<h3 class="callout-title">Writing a Commit Message</h3>
+<div class="callout-content">
+<p>A commit message is a short, descriptive, and specific comment that
+will help us remember later on what we did and why. When editing in the
+Github interface, it will suggest a vague message about which file
+you’ve updated or added. It is best practice to change this message to a
+short but more informative message about what in the file has changed.
+This more descriptive message will make it much easier if future you
+needs to go looking through the history for which commit made a specific
+change. You can find more about writing commit message in <a href="https://swcarpentry.github.io/git-novice/04-changes/index.html" class="external-link">the
+Software Carpentry <em>Version Control with Git</em> lesson</a>.</p>
+</div>
+</div>
+</div>
+<p>Commit this change to the <code>main</code> branch, wait for the
+website to rebuild then view the website.</p>
+<p>TODO: add image of update post</p>
+</div>
+<div class="section level1">
+<h1 id="writing-skribe">Writing Skribe<a class="anchor" aria-label="anchor" href="#writing-skribe"></a>
+</h1>
+<p>Now that we know about the editing interface and preview tab of our
+projects <code>my-first-post.skr</code> we can use it as a text editor
+and investigate selected Skribe features.</p>
+<p>Our <code>my-first-post.skr</code> already contains vanilla text and
+three formatting features: - Heading <code>(h1 [My first post!])</code>
+- Paragraph <code>(p [This is a static website and blog.])</code> -
+Emphasis using <code>(bold Skribe)</code>.</p>
+<p>Additionally it shows how to evaluate a scheme expression: - `(+ 1 2
+3 4 5)</p>
+<p>Let’s learn some more Skribe by adding some formatting and see what
+happens when we rebuild the website. Add the following to your
+<code>my-first-post.skr</code> file.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>(post</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a> :title <span class="st">"My first post!"</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a> :date (make-date* <span class="dv">2025</span> <span class="dv">06</span> <span class="dv">21</span> <span class="dv">09</span> <span class="dv">00</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a> :tags '(<span class="st">"Skribe"</span> <span class="st">"scheme"</span> <span class="st">"program"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>(h1 <span class="op">[</span>My first post!<span class="op">]</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>(p <span class="op">[</span>This is a (italic static) website <span class="kw">and</span> blog.<span class="op">]</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>(p <span class="op">[</span>It forms the basis of a ,(ref :url <span class="st">"https://carpentries.org/"</span> :text <span class="st">"Carpentries"</span>) lesson.<span class="op">]</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>(p <span class="op">[</span>Some established Carpentries lesson programs are:</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a> ,(itemize</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>   (item Software Carpentry)</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>   (item Data Carpentry)</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>   (item Library Carpentry))<span class="op">]</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>(p <span class="op">[</span>The source is written in (bold Skribe), a</span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>    document format that allows you to use</span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a>    embed scheme programs to create your</span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>    document.<span class="op">]</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a>(p <span class="op">[</span><span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">=</span> <span class="op">]</span></span>
+<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a>   (<span class="op">+</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span>)))</span></code></pre>
+</div>
+<p>If you click the <code>preview</code> button, GitHub will show a
+preview of differences, the green bar indicates added lines, and the red
+bar indicates deleted lines.</p>
+<p>TODO: Add image</p>
+<p>You can then commit changes, wait for the site to build and then
+check how your new changes appear online.</p>
+<p>TODO: Add image</p>
+<div id="line-breaks" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="line-breaks" class="callout-inner">
+<h3 class="callout-title">Line breaks</h3>
+<div class="callout-content">
+<p>All text has so far been grouped into either a header, a list or a
+paragraph. The output has linebreaks automatically inserted. This allows
+for a variety of output formats where the layout is determined according
+to the context and linebreaks are automatically inserted
+appropriately.</p>
+</div>
+</div>
+</div>
+<p>Let’s do an exercise to try out writing more Skribe.</p>
+<div id="challenge-try-out-skribe" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-try-out-skribe" class="callout-inner">
+<h3 class="callout-title">Challenge: Try Out Skribe</h3>
+<div class="callout-content">
+<p>Use <a href="https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user-1.html#Standard-Markups" class="external-link">standard
+markup section of the Skribe user manual</a> to add the following to
+your <code>my-first-post.skr</code>:</p>
+<ul>
+<li>A second level heading</li>
+<li>Some text under that second level heading that includes a link and
+<u>underlined</u> text.</li>
+<li>A third level heading</li>
+<li>A numbered list</li>
+<li>Bonus: Add this image <a href="https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png" class="external-link uri">https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Example Solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>For example your Skribe might add the following:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(ref :url https://bkmgit.github.io/haunt-intro :text here)<span class="op">.]</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>(enumerate</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a> (item <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a> (item <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> (item <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> (item <span class="op">[</span>Allows you to <span class="op">]</span> (underline <span class="st">"automate"</span>) <span class="op">[</span> the <span class="op">]</span> (sc <span class="st">"boring"</span>) <span class="op">[</span>stuff.<span class="op">]</span>))</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>(figure :legend <span class="st">"Carpentries Logo"</span> (image file: <span class="st">"/images/TheCarpentries-opengraph.png"</span>))</span></code></pre>
+</div>
+<p>Where the image file is obtained from <a href="https://github.com/carpentries/carpentries.org/raw/main/images/TheCarpentries-opengraph.png" class="external-link uri">https://github.com/carpentries/carpentries.org/raw/main/images/TheCarpentries-opengraph.png</a>)
+and placed in the images folder</p>
+<p>TODO: Add image of generated site</p>
+</div>
+</div>
+</div>
+</div>
+<div id="reference-style-links" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="reference-style-links" class="callout-inner">
+<h3 class="callout-title">Reference-Style Links</h3>
+<div class="callout-content">
+<p>Up to now, we have used <em>inline-style</em> links which have the
+URL inline with the description text, for example:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>,(ref :url <span class="st">"https://carpentries.org/"</span> :text <span class="st">"Carpentries"</span>)</span></code></pre>
+</div>
+<p>If you use a link more than once, consider using so called
+<em>reference-style</em> links instead. Reference-style links reference
+the URL via a label. The label goes into square brackets
+<code>[ ]</code> right after the description text of the link and then
+later, usually at the bottom of the page, you can connect that label to
+the url it references to complete the link. This looks like:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="op">[</span>Carpentries Webpage<span class="op">][</span>carpentries<span class="op">]</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="op">[</span>carpentries<span class="op">]</span>: https://carpentries.org/</span></code></pre>
+</div>
+<p>and helps to follow the [DRY principle][dry-principle], avoiding
+redundant specification of information.</p>
+</div>
+</div>
+</div>
+<div id="note-about-image-use-and-attribution" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="note-about-image-use-and-attribution" class="callout-inner">
+<h3 class="callout-title">Note about image use and attribution</h3>
+<div class="callout-content">
+<p>When using images on your website that you don’t own, it’s important
+to reuse the content responsibly. This means ensuring that the image
+owner has given permission for the image to be reused and that the image
+includes appropriate attribution to the owner. If you’re unsure about
+the availability of an image you can always contact the owner or check
+if a license is provided alongside the image which may include
+conditions for reuse. Anyone can re-use and edit Public Domain images so
+searching for images in the public domain can be a good way to find
+images for your website. However, it is still good practice to give
+credit when possible, even for public domain images.</p>
+</div>
+</div>
+</div>
+<p>We will continue to use Skribe and learn more throughout the rest of
+the lesson.</p>
+<div id="skribe-1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="skribe-1" class="callout-inner">
+<h3 class="callout-title">Skribe</h3>
+<div class="callout-content">
+<p>Skribe offers a variety of formatting features. Have a look at the <a href="https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user.html#Skribe-User-Manual" class="external-link">manual</a>
+to get an overview or look things up.</p>
+</div>
+</div>
+</div>
+<div id="a-note-on-documents-created-by-skribe" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="a-note-on-documents-created-by-skribe" class="callout-inner">
+<h3 class="callout-title">A note on documents created by Skribe</h3>
+<div class="callout-content">
+<p>The basic building blocks used to create a Skribe document are the
+same, but because of its extensibility, you will need to read through
+the code to determine what new functionality has been added to material
+created using Skribe. Do not expect to be able to copy and paste
+material from one Skribe document to another without understanding it
+and modifying it for your needs.</p>
+</div>
+</div>
+</div>
+<div id="optional-exercise-examine-other-haunt-sites" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="optional-exercise-examine-other-haunt-sites" class="callout-inner">
+<h3 class="callout-title">Optional Exercise: Examine other Haunt sites</h3>
+<div class="callout-content">
+<ul>
+<li>The <a href="http://bootstrappable.org/" class="external-link">Bootstrapable builds
+site</a> is created using Haunt and uses Skribe for its posts. Examine
+the <a href="https://codeberg.org/guix/bootstrappable" class="external-link">source</a>.</li>
+<li>
+<a href="https://karl.hallsby.com/" class="external-link">Karl Hallsby’s blog</a> is
+created using Haunt and uses <a href="https://okmij.org/ftp/Scheme/SXML.html" class="external-link">SXML</a> for its posts.
+Examine the <a href="https://cgit.karl.hallsby.com/website.git/tree/" class="external-link">source</a>. A
+brief description of SXML is also available on <a href="https://en.wikipedia.org/wiki/SXML" class="external-link">wikipedia</a>
+</li>
+</ul>
+<p>How do SXML and Skribe differ?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>SXML is a markup language that faciliates using scheme to work with
+XML documents. Skribe is a document as a program. Both Skribe and SXML
+can be converted to XML, to take advantage of the powerful query,
+validation and transformation tools available for XML.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="more-skribe-features" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="more-skribe-features" class="callout-inner">
+<h3 class="callout-title">More Skribe Features</h3>
+<div class="callout-content">
+<p>Check out our <a href="../more_skribe/index.html">Extras page on
+Skribe</a> for a more comprehensive overview of Skribe, including how to
+create fenced code blocks, do syntax highlighting for various languages
+and typeset academic papers.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>“Skribe is a powerful and relatively easy way to write formatted
+text”</li>
+<li>“Skribe allows a single source to be output to a variety of formats,
+including html and pdf”</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div></section><section id="aio-reference"><p>Content from <a href="reference.html">References</a></p>
+<hr>
+<p>Last updated on 2025-06-24 |
+
+        <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/reference.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li><a href="https://glosario.carpentries.org/en/#git_branch" class="external-link glossary-definition">Branch</a></li>
+<li><a href="https://glosario.carpentries.org/en/#commit" class="external-link glossary-definition">Commit</a></li>
+<li><a href="https://glosario.carpentries.org/en/#css" class="external-link glossary-definition">CSS</a></li>
+<li><a href="https://carpentries.github.io/glosario/en/#dry" class="external-link glossary-definition">DRY
+(Don’t repeat yourself) principles</a></li>
+<li><a href="https://glosario.carpentries.org/en/#git" class="external-link glossary-definition">Git</a></li>
+<li><a href="https://glosario.carpentries.org/en/#github" class="external-link glossary-definition">GitHub</a></li>
+<li>
+<a href="https://glosario.carpentries.org/en/#html" class="external-link glossary-definition">HTML</a><br>
+</li>
+<li><a href="https://glosario.carpentries.org/en/#markdown" class="external-link glossary-definition">Markdown</a></li>
+<li><a href="https://carpentries.github.io/glosario/en/#readme" class="external-link glossary-definition">README</a></li>
+<li><a href="https://glosario.carpentries.org/en/#repository" class="external-link glossary-definition">Repository/repo</a></li>
+<li><a href="https://glosario.carpentries.org/en/#version_control_system" class="external-link glossary-definition">Version
+Control</a></li>
+<li><a href="https://glosario.carpentries.org/en/#yaml" class="external-link glossary-definition">YAML</a></li>
+</ul>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ --></section></section>
 </div>
     </main>
 </div>
