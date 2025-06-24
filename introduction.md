@@ -244,13 +244,13 @@ then creating it with GitHub Pages is a good option.
 GitHub Pages is a system allowing users to create and serve websites directly from their GitHub repositories.
 The service is free for public repositories and simple pages can be created and served with very little configuration required.
 
-Behind the scenes GitHub Pages uses a static site generator called Jekyll, which we're going to learn about later
-in this lesson. There are many different technologies that come together when creating a website with GitHub Pages
+There are many different technologies that come together when creating a website with GitHub Pages
 that you have to be familiar with (as shown in the diagram below). It may sound overwhelming at first
-but we will explain most of these technologies in this lesson - we only don't cover CSS/Sass (styling language that gets compiled into CSS) and
-JavaScript/CoffeeScript (scripting language that gets compiled into JavaScript) in detail.
+but we will explain most of these technologies in this lesson - we only don't cover CSS/Sass
+(styling language that gets compiled into CSS) and JavaScript/CoffeeScript (scripting language that
+gets compiled into JavaScript) in detail.
 
-![Static websites in GitHub Pages technology overview diagram](fig/jekyll-gh-pages-website-overview.svg){: width="700px" }
+![Static websites in GitHub Pages technology overview diagram](fig/jekyll-gh-pages-website-overview.svg)
 
 First, we are going to set up a repository to store our files and learn more about how to author and format the content
 of our pages using HTML and Markdown, before configuring GitHub to display this content as a website using GitHub Pages.
@@ -280,7 +280,7 @@ Before you can create a repo, you will need to
 Make sure to login with your GitHub account and visit https://github.com.
 Click the green "New" repo button on the left hand side of GitHub:
 
-![New repository button](fig/new_repo_button.png){: .image-with-shadow width="100px" }
+![New repository button](fig/new_repo_button.png)
 
 **or** click the "+" menu in the upper righthand corner and
 choose "New Repository".
@@ -289,24 +289,25 @@ choose "New Repository".
 
 Next you will need to fill in some info about your repository.
 
-![Blank new repository page](fig/blank_new_repo.png){: .image-with-shadow width="600px" }
+![Blank new repository page](fig/blank_new_repo.png)
 
 In this lesson, we will be working on a general group website.
 You can imagine this website may be for your lab group, a specific project group,
 or another group you work with.
 Under the "Repository name" field type `group-website`.
 
-![New repository - set name to group-website](fig/set_repo_name.png){: .image-with-shadow width="600px" }
+![New repository - set name to group-website](fig/set_repo_name.png)
 
-We can also add a description (for instance **Repo for learning how to make websites with Jekyll and GitHub pages**) so we know what this repo is when we find it again after the workshop.
+We can also add a description (for instance **Repo for learning how to make websites with GitHub pages**)
+so we know what this repo is when we find it again after the workshop.
 
-![New repository - set description](fig/set_repo_description.png){: .image-with-shadow width="600px" }
+![New repository - set description](fig/set_repo_description.png)
 
 Under the "Initialize this repository with:" section we will check `Add a README file`
 and `Choose a license`.  It is good practice to have a README file that gives more information
 about your repo and to set a license for your work.
 
-![Initialise a new repository with a README and a licence file](fig/initialize_readme_license.png){: .image-with-shadow width="600px" }
+![Initialise a new repository with a README and a licence file](fig/initialize_readme_license.png)
 
 for this example repository we’ll use the `Creative Commons Zero v1.0 Universal` (CC0) license,
 which allows anyone to re-use and adapt the content of the repository without restriction,
@@ -322,23 +323,22 @@ for more information about possible licenses.
 
 ::::::::::::::::::::::
 
-![Set licence to CC0](fig/set_CC0_license.png){: .image-with-shadow width="600px" }
+![Set licence to CC0](fig/set_CC0_license.png)
 
 Once you've finished these steps you can click the "Create Repository" button to
 finish creating the repo.
 
-![Filled in form with a create repository button](fig/create_repository.png){: .image-with-shadow width="600px" }
+![Filled in form with a create repository button](fig/create_repository.png)
 
 GitHub will then setup the repo and it should create the repo called `group-website` with a `README.md` file and a `LICENSE` file.
 
-![Github repository for the group website](fig/group_website_repo.png){: .image-with-shadow width="800px" }
+![Github repository for the group website](fig/group_website_repo.png)
 
 [qwantz-easter-egg-ext]: https://chrome.google.com/webstore/detail/dinosaur-comics-easter-eg/bojkkeeefjmeogpgnlomodfkkfkfhabj
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - "A static site generator combines page-specific content with layout elements and styling information to construct individual static webpages."
-- "GitHub Pages/GitLab Pages is a good choice for people who are already familiar with Git and GitHub/GitLab."
 - "This approach can be used to create a relatively small website/blog on a limited budget."
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
