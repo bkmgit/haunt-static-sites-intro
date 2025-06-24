@@ -229,7 +229,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="markdown.html">2. Authoring With Markdown</a>
+        <a href="github-pages.html">2. Hosting Websites on GitHub</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -238,79 +238,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="github-pages.html">3. Hosting Websites on GitHub</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush5">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading5">
-        <a href="starting-jekyll.html">4. Starting With Jekyll</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush6">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading6">
-        <a href="includes.html">5. Reusing Blocks of Content</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="layouts.html">6. Page Layouts</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush8">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading8">
-        <a href="filters.html">7. Working With Filters</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush9">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading9">
-        <a href="arrays.html">8. Loops and Collections</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush10">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading10">
-        <a href="wrap-up.html">9. Wrap-up</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush11">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading11">
-        <a href="reference.html">10. References</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush12">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading12">
-        <a href="more-markdown.html">11. More on Markdown</a>
+        <a href="starting-haunt.html">3. Starting With Haunt</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -358,7 +286,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/markdown.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/github-pages.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -366,14 +294,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Home
         </a>
-        <a class="chapter-link float-end" href="../instructor/markdown.html" rel="next">
-          Next: Authoring With...
+        <a class="chapter-link float-end" href="../instructor/github-pages.html" rel="next">
+          Next: Hosting Websites on...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2025-06-19 |
+        <p>Last updated on 2025-06-24 |
 
         <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -707,18 +635,16 @@ good option. GitHub Pages is a system allowing users to create and serve
 websites directly from their GitHub repositories. The service is free
 for public repositories and simple pages can be created and served with
 very little configuration required.</p>
-<p>Behind the scenes GitHub Pages uses a static site generator called
-Jekyll, which we’re going to learn about later in this lesson. There are
-many different technologies that come together when creating a website
-with GitHub Pages that you have to be familiar with (as shown in the
-diagram below). It may sound overwhelming at first but we will explain
-most of these technologies in this lesson - we only don’t cover CSS/Sass
-(styling language that gets compiled into CSS) and
+<p>There are many different technologies that come together when
+creating a website with GitHub Pages that you have to be familiar with
+(as shown in the diagram below). It may sound overwhelming at first but
+we will explain most of these technologies in this lesson - we only
+don’t cover CSS/Sass (styling language that gets compiled into CSS) and
 JavaScript/CoffeeScript (scripting language that gets compiled into
 JavaScript) in detail.</p>
-<p><img src="../fig/jekyll-gh-pages-website-overview.svg" alt="Static websites in GitHub Pages technology overview diagram" class="figure">{:
-width=“700px” }</p>
-<p>First, we are going to set up a repository to store our files and
+<figure><img src="../fig/jekyll-gh-pages-website-overview.svg" alt="Static websites in GitHub Pages technology overview diagram" class="figure mx-auto d-block"><div class="figcaption">Static websites in GitHub Pages technology
+overview diagram</div>
+</figure><p>First, we are going to set up a repository to store our files and
 learn more about how to author and format the content of our pages using
 HTML and Markdown, before configuring GitHub to display this content as
 a website using GitHub Pages.</p>
@@ -747,33 +673,29 @@ web to control the website we will be creating.</p>
 </div>
 <p>Make sure to login with your GitHub account and visit <a href="https://github.com" class="external-link uri">https://github.com</a>. Click the
 green “New” repo button on the left hand side of GitHub:</p>
-<p><img src="../fig/new_repo_button.png" alt="New repository button" class="figure">{:
-.image-with-shadow width=“100px” }</p>
-<p><strong>or</strong> click the “+” menu in the upper righthand corner
+<figure><img src="../fig/new_repo_button.png" alt="New repository button" class="figure mx-auto d-block"><div class="figcaption">New repository button</div>
+</figure><p><strong>or</strong> click the “+” menu in the upper righthand corner
 and choose “New Repository”.</p>
 <p><img src="../fig/plus_new_repo.png" alt="Dropdown plus menu with new repository option highlighted" class="figure">{:
 .image-with-shadow width=“200px” }</p>
 <p>Next you will need to fill in some info about your repository.</p>
-<p><img src="../fig/blank_new_repo.png" alt="Blank new repository page" class="figure">{: .image-with-shadow width=“600px”
-}</p>
-<p>In this lesson, we will be working on a general group website. You
+<figure><img src="../fig/blank_new_repo.png" alt="Blank new repository page" class="figure mx-auto d-block"><div class="figcaption">Blank new repository page</div>
+</figure><p>In this lesson, we will be working on a general group website. You
 can imagine this website may be for your lab group, a specific project
 group, or another group you work with. Under the “Repository name” field
 type <code>group-website</code>.</p>
-<p><img src="../fig/set_repo_name.png" alt="New repository - set name to group-website" class="figure">{: .image-with-shadow
-width=“600px” }</p>
-<p>We can also add a description (for instance <strong>Repo for learning
-how to make websites with Jekyll and GitHub pages</strong>) so we know
-what this repo is when we find it again after the workshop.</p>
-<p><img src="../fig/set_repo_description.png" alt="New repository - set description" class="figure">{: .image-with-shadow
-width=“600px” }</p>
-<p>Under the “Initialize this repository with:” section we will check
+<figure><img src="../fig/set_repo_name.png" alt="New repository - set name to group-website" class="figure mx-auto d-block"><div class="figcaption">New repository - set name to group-website</div>
+</figure><p>We can also add a description (for instance <strong>Repo for learning
+how to make websites with GitHub pages</strong>) so we know what this
+repo is when we find it again after the workshop.</p>
+<figure><img src="../fig/set_repo_description.png" alt="New repository - set description" class="figure mx-auto d-block"><div class="figcaption">New repository - set description</div>
+</figure><p>Under the “Initialize this repository with:” section we will check
 <code>Add a README file</code> and <code>Choose a license</code>. It is
 good practice to have a README file that gives more information about
 your repo and to set a license for your work.</p>
-<p><img src="../fig/initialize_readme_license.png" alt="Initialise a new repository with a README and a licence file" class="figure">{:
-.image-with-shadow width=“600px” }</p>
-<p>for this example repository we’ll use the
+<figure><img src="../fig/initialize_readme_license.png" alt="Initialise a new repository with a README and a licence file" class="figure mx-auto d-block"><div class="figcaption">Initialise a new repository with a README and a
+licence file</div>
+</figure><p>for this example repository we’ll use the
 <code>Creative Commons Zero v1.0 Universal</code> (CC0) license, which
 allows anyone to re-use and adapt the content of the repository without
 restriction, but you may want to consider choosing something more
@@ -792,18 +714,16 @@ licenses.</p>
 </div>
 </div>
 </div>
-<p><img src="../fig/set_CC0_license.png" alt="Set licence to CC0" class="figure">{:
-.image-with-shadow width=“600px” }</p>
-<p>Once you’ve finished these steps you can click the “Create
+<figure><img src="../fig/set_CC0_license.png" alt="Set licence to CC0" class="figure mx-auto d-block"><div class="figcaption">Set licence to CC0</div>
+</figure><p>Once you’ve finished these steps you can click the “Create
 Repository” button to finish creating the repo.</p>
-<p><img src="../fig/create_repository.png" alt="Filled in form with a create repository button" class="figure">{:
-.image-with-shadow width=“600px” }</p>
-<p>GitHub will then setup the repo and it should create the repo called
+<figure><img src="../fig/create_repository.png" alt="Filled in form with a create repository button" class="figure mx-auto d-block"><div class="figcaption">Filled in form with a create repository
+button</div>
+</figure><p>GitHub will then setup the repo and it should create the repo called
 <code>group-website</code> with a <code>README.md</code> file and a
 <code>LICENSE</code> file.</p>
-<p><img src="../fig/group_website_repo.png" alt="Github repository for the group website" class="figure">{: .image-with-shadow
-width=“800px” }</p>
-<div id="keypoints1" class="callout keypoints">
+<figure><img src="../fig/group_website_repo.png" alt="Github repository for the group website" class="figure mx-auto d-block"><div class="figcaption">Github repository for the group website</div>
+</figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -813,8 +733,6 @@ width=“800px” }</p>
 <ul><li>“A static site generator combines page-specific content with layout
 elements and styling information to construct individual static
 webpages.”</li>
-<li>“GitHub Pages/GitLab Pages is a good choice for people who are
-already familiar with Git and GitHub/GitLab.”</li>
 <li>“This approach can be used to create a relatively small website/blog
 on a limited budget.”</li>
 </ul></div>
@@ -827,7 +745,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/markdown.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/github-pages.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -835,8 +753,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Home
         </a>
-        <a class="chapter-link float-end" href="../instructor/markdown.html" rel="next">
-          Next: Authoring With...
+        <a class="chapter-link float-end" href="../instructor/github-pages.html" rel="next">
+          Next: Hosting Websites on...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -882,7 +800,7 @@ any links that you are not going to use.
   "url": "https://bkmgit.github.io/haunt-static-sites-intro/instructor/introduction.html",
   "identifier": "https://bkmgit.github.io/haunt-static-sites-intro/instructor/introduction.html",
   "dateCreated": "2025-06-18",
-  "dateModified": "2025-06-19",
+  "dateModified": "2025-06-24",
   "datePublished": "2025-06-24"
 }
 
