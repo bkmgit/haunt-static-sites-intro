@@ -67,16 +67,16 @@ contact: 'https://github.com/bkmgit/haunt-static-sites-intro/issues' # FIXME
 
 episodes:
 - introduction.Rmd
-- markdown.Rmd
 - github-pages.Rmd
-- starting-jekyll.Rmd
-- includes.Rmd
-- layouts.Rmd
-- filters.Rmd
-- arrays.Rmd
-- wrap-up.Rmd
-- reference.Rmd
-- more-markdown.Rmd
+- starting-haunt.Rmd
+#- srkibe.Rmd
+#- themes.Rmd
+#- layouts.Rmd
+#- filters.Rmd
+#- arrays.Rmd
+#- wrap-up.Rmd
+#- reference.Rmd
+#- more-skribe.Rmd
 
 # Information for Learners
 learners: 
