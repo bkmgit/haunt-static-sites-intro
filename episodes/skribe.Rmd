@@ -1,5 +1,5 @@
 ---
-title: "Authoring With Markdown"
+title: "Authoring With Skribe"
 teaching: 20
 exercises: 15
 ---
@@ -19,165 +19,190 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-keypoints:
-- "Markdown is an relatively easy way to write formatted text"
+# Skribe
+Skribe is a language used to enable writing documents
+that can be output in a variety of formats include HTML. 
+Plain text characters and parenthesis are used in place of HTML tags. 
+These characters are then processed by Haunt (or another script or
+application) and transformed into HTML.  Skribe separates content
+from layout and formatting details which are handled by a program.
+Frequently used elements, like headings, paragraphs, lists, tables 
+and text formatting (i.e. bold, italic) are part of Skribe.
+Skribe's simplified syntax keeps content human-readable.  Skribe's
+power comes from the ability to use Scheme to automate and customize
+the websites you create relieving you of tedious repetitive work.
 
-# Markdown
-Markdown is a language used to simplify writing HTML. 
-Plain text characters like # and * are used in place of HTML tags. 
-These characters are then processed by Jekyll (or another script or application)
-and transformed into HTML tags.
-As the name Markdown suggests, 
-the language has been trimmed *down* to a minimum.
-The most frequently used elements, like 
-headings, 
-paragraphs, 
-lists, 
-tables 
-and basic text formatting (i.e. bold, italic) 
-are part of Markdown.
-Markdown's simplified syntax keeps content human-readable.  
-This is one reason it is a preferred language for formatted user input on web sites like:
+::::::::::::::::::::::::::::::::::::: challenge
 
-- [Stack Exchange](https://stackexchange.com/)
-- [GitHub](https://github.com/)
-- [GitLab](https://about.gitlab.com/)
+Challenge: Learn more about Skribe
 
+Read through the
+[paper](https://www-sop.inria.fr/members/Manuel.Serrano/publi/jfp05/article.html)
+introducing Skribe.
 
-# Where to Start Writing Markdown?
-A lot of tools for rendering Markdown source code exist.
-Rendering is the process of generating a nice view of the content
-using the style information included in the source text.
-Chances are high, your editor can do this.
-As we are working towards authoring websites using Jekyll and GitHub pages,
-we will use GitHub straight away for learning the basics of Markdown.
-The GitHub project you created in the last episode contains a file `README.md`.
+- What features make Skribe attractive?
+- What are some output formats that have been programmed to be generated from
+  Skribe?
+- What is type checking and why might it be helpful? What drawbacks does type
+  checking have?
 
-The image below shows the projects default view.
-This view includes a rendered view of the content inside the file `README.md`.
-Your project should look quite similar except for the red circle around the pencil symbol.
+:::::::::::::::::::::::: solution
 
-![On the homepage of a GitHub repository, the edit button is positioned to the top right of the README preview](fig/group_website_repo_edit.png){: .image-with-shadow width="900px" }
+- Skribe uses scheme to allow one to create a compact notation that describes
+  writer intent for formatting.  Skribe allows one to use code to create
+  documents that can be output in multiple formats.
+- Skribe documents can be output to HTML, TexInfo and through LaTeX to PDF.
+- A [type system](https://en.wikipedia.org/wiki/Type_system) is a way of
+  associating a set of properties to variables in a program.  It is similar
+  to how units are assigned to physical quantities, for example one might
+  measure length in meters and speed in meters per second.  Types allow
+  programs to prevent some errors - for example it can be reasonable to add
+  two distances, but it is not reasonable to add a distance to a speed.  It
+  is however reasonable to calculate a speed knowing distance travelled in a
+  certain time.  Type checking can increase the time it takes for a program
+  to be compiled and/or run as extra operations are needed to verify the
+  rules associated to each type are satisfied.
 
+:::::::::::::::::::::::::::::::::
 
-Click on that pencil symbol to open an editing interface of your project's `README.md` file.
-Once we've clicked the pencil symbol, GitHub will open that file in the editing interface.
+::::::::::::::::::::::::::::::::::::::::::::::::
 
-![Editing interface of the group websites README file](fig/group_website_readme_edit.png){: .image-with-shadow width="900px" }
+# Where to Start Writing Skribe?
 
-We can change the content and have a look at the rendered view by clicking the _Preview changes_ tab.
+When editing Skribe source code, many editors will help you by
+highlighting matching brackets and parenthesis.  You can also
+customize text editors you install on your own hardware to
+provide additional features, such as highlighting.
 
-![Preview of the rendered content of the group websites README file](fig/group_website_readme_render.png){: .image-with-shadow width="900px" }
+As we are working towards authoring websites using Haunt and GitHub pages,
+we will use GitHub straight away for learning the basics of Skribe.
+The GitHub project you created in contains a file `my-first-post.skr`.
 
-Let's add `Some **bold** font` and see what happens when we preview it using the preview tab.
-If you check the "Show diff" box on the upper-right hand side, GitHub will show green vertical bars visually highlighting the new content.
-To save the content to the file `README.md`, scroll down a bit and search for a _Commit changes_ menu
-at the bottom of the page.
+TODO: Add image
+
+Click on that pencil symbol to open an editing interface of your project's
+`my-first-post.skr` file. Once we've clicked the pencil symbol, GitHub will
+open that file in the editing interface.
+
+TODO: Add image
+
+Let us change the content by modifying `written in Skribe` to
+`written in (bold Skribe)`. Examine the rendered view by clicking the
+_Preview changes_ tab.
+
+TODO: Add image
+
+GitHub shows green vertical bars visually highlighting the
+new content. To save the content to the file `my-first-post.skr`,
+search for a _Commit changes_ button.
 After having changed something, the commit menu looks like this:
 
-![Commit menu for changes done in the GitHub web interface is located at the bottom of the website](fig/group_website_readme_commit.png){: .image-with-shadow width="900px" }
+TODO: Add image
 
 :::::::::::::: callout
 
 ## Writing a Commit Message
 
-A commit message is a short, descriptive, and specific comment that will help us remember later on what we did and why.
-When editing in the Github interface, it will suggest a vague message about which file you've updated or added.
-It is best practice to change this message to a short but more informative message about what in the file has changed.
-This more descriptive message will make it much easier if future you needs to go looking through the history
-for which commit made a specific change.
-You can find more about writing commit message in [the Software Carpentry _Version Control with Git_ lesson](https://swcarpentry.github.io/git-novice/04-changes/index.html).
+A commit message is a short, descriptive, and specific comment that
+will help us remember later on what we did and why. When editing in
+the Github interface, it will suggest a vague message about which file
+you've updated or added. It is best practice to change this message to
+a short but more informative message about what in the file has changed.
+This more descriptive message will make it much easier if future you
+needs to go looking through the history for which commit made a specific change.
+You can find more about writing commit message in
+[the Software Carpentry _Version Control with Git_ lesson](https://swcarpentry.github.io/git-novice/04-changes/index.html).
 
 ::::::::::::::::::::::
 
-Commit this change to the `main` branch.
+Commit this change to the `main` branch, wait for the website to rebuild
+then view the website.
 
-# Writing Markdown
+TODO: add image of update post
 
-Now that we know about the editing interface and preview tab of our projects `README.md`
-we can use it as a text editor and investigate selected Markdown features.
+# Writing Skribe
 
-Our `README.md` already contains vanilla text and
-two formatting features:
-- Heading `# group-website`
-- Emphasis using `**bold**`.
+Now that we know about the editing interface and preview tab of our projects
+`my-first-post.skr` we can use it as a text editor and investigate selected
+Skribe features.
 
-Let's learn some more Markdown by adding some formatting and 
-see what happens when we preview it using the preview tab.
-Add the following to your `README.md` file.
+Our `my-first-post.skr` already contains vanilla text and
+three formatting features:
+- Heading `(h1 [My first post!])`
+- Paragraph `(p [This is a static website and blog.])`
+- Emphasis using `(bold Skribe)`.
 
-```markdown
-# group-website
-Repo for learning how to make websites with Jekyll and GitHub pages
+Additionally it shows how to evaluate a scheme expression:
+- `(+ 1 2 3 4 5)
 
-## Learning Markdown
+Let's learn some more Skribe by adding some formatting and 
+see what happens when we rebuild the website.
+Add the following to your `my-first-post.skr` file.
 
-Vanilla text may contain *italics* and **bold words**.
+```scheme
+(post
+ :title "My first post!"
+ :date (make-date* 2025 06 21 09 00)
+ :tags '("Skribe" "scheme" "program")
 
-This paragraph is separated from the previous one by a blank line.
-Line breaks
-are caused by two trailing spaces at the end of a line.
+(h1 [My first post!])
 
-[Carpentries Webpage](https://carpentries.org/)
+(p [This is a (italic static) website and blog.])
 
-### Carpentries Lesson Programs:
-- Software Carpentry
-- Data Carpentry
-- Library Carpentry
+(p [It forms the basis of a ,(ref :url "https://carpentries.org/" :text "Carpentries") lesson.])
+
+(p [Some established Carpentries lesson programs are:
+ ,(itemize
+   (item Software Carpentry)
+   (item Data Carpentry)
+   (item Library Carpentry))])
+
+(p [The source is written in (bold Skribe), a
+    document format that allows you to use
+    embed scheme programs to create your
+    document.])
+
+(p [1 + 2 + 3 + 4 + 5 = ]
+   (+ 1 2 3 4 5)))
 ```
 
-You can then click the preview tab again to see how the formatting renders.
+If you click the `preview` button, GitHub will show a preview
+of differences, the green bar indicates added lines, and the
+red bar indicates deleted lines.
 
-![Preview of the formatting added to the README](fig/markdown_preview_formatting.png){: .image-with-shadow width="900px" }
+TODO: Add image
 
-If you click the `Show diff` checkbox in the right corner, GitHub will include a preview of differences too -
-the green bar indicates added lines, the red bar indicates deleted lines, and yellow - lines that have been modified.
+You can then commit changes, wait for the site to build
+and then check how your new changes appear online.
+
+TODO: Add image
 
 :::::::::::::: callout
 
-## Markdown Trailing Spaces Are Meaningful
+## Line breaks
 
-In the example above there are two spaces at the end of `Line breaks  `.
-These introduce what is called a **hard line break**, causing that paragraph to
-continue in the next line by adding a `<br/>` to the generated HTML.
+All text has so far been grouped into either a header, a list
+or a paragraph.  The output has linebreaks automatically
+inserted. This allows for a variety of output formats where
+the layout is determined according to the context and linebreaks
+are automatically inserted appropriately.
 
-If you break the line in a markdown file but don't include the two trailing spaces
-the generated HTML will continue in the same line **without** introducing a `<br/>`.
-This is called a **soft line break**.
-
-In some cases you may find that **soft line breaks** do introduce a `<br/>`.
-This can happen when using different [markdown flavors](#markdown-flavours).
-
-See for instance:
-```markdown
-Soft line
-break
-
-Hard line
-break
-```
-
-That produces:
-
-![Difference between soft and hard breaks](fig/soft_hard_markdown_line_break.png){: .image-with-shadow width="200px" }
 
 ::::::::::::::::::::::
 
-To keep this addition to our `README.md` we need to commit these changes to save them.
-Scroll down to the bottom of the page, add a commit message if you wish, and then commit to the `main` branch.
 
-![Committing the formatting added to the README](fig/committing_formatting_addition_to_readme.png){: .image-with-shadow width="800px" }
-
-Let's do an exercise to try out writing more markdown.
+Let's do an exercise to try out writing more Skribe.
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge: Try Out Markdown
-Use [this cheatsheet][github-flavored-markdown] to add the following to your `README.md`:
+## Challenge: Try Out Skribe
+Use
+[standard markup section of the Skribe user manual](https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user-1.html#Standard-Markups)
+to add the following to your `my-first-post.skr`:
 
-- Another second level heading
-- Some text under that second level heading that includes an link and ~~strikethrough~~ text.
+- A second level heading
+- Some text under that second level heading that includes a link and <u>underlined</u> text.
 - A third level heading
 - A numbered list
 - Bonus: Add this image <https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png>
@@ -185,23 +210,30 @@ Use [this cheatsheet][github-flavored-markdown] to add the following to your `RE
 :::::::::::::::::::::::: solution
 
 ## Example Solution
-For example your markdown might look like the following:
+For example your Skribe might add the following:
 
-```markdown
-## More info on the lesson
-You can find this lesson [here](https://carpentries-incubator.github.io/jekyll-pages-novice/).
+```scheme
+(h2 [More about Skribe])
 
-### Four reasons you should learn Markdown:
+(p [You can find this lesson ,(ref :url https://bkmgit.github.io/haunt-intro :text here).]
 
-1. Less formatting than HTML
-2. Easy to read even with formatting
-3. Commonly used for websites and software development
-4. We ~~don't~~ use it in The Carpentries
+(h3 [Four reasons you should learn Skribe:])
 
-![Carpentries Logo](https://github.com/carpentries/carpentries.org/raw/main/images/TheCarpentries-opengraph.png)
+(enumerate
+ (item [Less formatting than HTML])
+ (item [Easy to read even with formatting])
+ (item [Powerful programming environment])
+ (item [Allows you to ] (underline "automate") [ the ] (sc "boring") [stuff.]))
+
+(figure :legend "Carpentries Logo" (image file: "/images/TheCarpentries-opengraph.png"))
 ```
 
-![Rendered solution to the Markdown exercise](fig/markdown_exercise.png){: .image-with-shadow width="800px" }
+Where the image file is obtained from 
+https://github.com/carpentries/carpentries.org/raw/main/images/TheCarpentries-opengraph.png)
+and placed in the images folder
+
+
+TODO: Add image of generated site
 
 :::::::::::::::::::::::::::::::::
 
@@ -214,8 +246,8 @@ You can find this lesson [here](https://carpentries-incubator.github.io/jekyll-p
 
 Up to now, we have used _inline-style_ links which have the URL inline with the description text, for example:
 
-```markdown
-[Carpentries Webpage](https://carpentries.org/)
+```scheme
+,(ref :url "https://carpentries.org/" :text "Carpentries")
 ```
 
 If you use a link more than once, consider using so called _reference-style_ links instead.
@@ -224,7 +256,7 @@ The label goes into square brackets `[ ]` right after the description text of th
 then later, usually at the bottom of the page, you can connect that label to the url it references to complete the link.
 This looks like:
 
-```markdown
+```scheme
 [Carpentries Webpage][carpentries]
 
 [carpentries]: https://carpentries.org/
@@ -238,69 +270,85 @@ and helps to follow the [DRY principle][dry-principle], avoiding redundant speci
 :::::::::::::: callout
 
 ## Note about image use and attribution
-When using images on your website that you don't own, it's important to reuse the 
-content responsibly. 
-This means ensuring that the image owner has given permission for the image to be reused and that the image includes appropriate attribution to the owner.
-If you're unsure about the availability of an image you can always contact the owner or check if a license is provided alongside the image which may include conditions for reuse.
-Anyone can re-use and edit Public Domain images so searching for images in the public domain can be a good way to find images for your website.
- However, it is still good practice to give credit when possible, even for public domain images.
+When using images on your website that you don't own, it's important to reuse
+the  content responsibly. This means ensuring that the image owner has given
+permission for the image to be reused and that the image includes appropriate
+attribution to the owner. If you're unsure about the availability of an image
+you can always contact the owner or check if a license is provided alongside
+the image which may include conditions for reuse. Anyone can re-use and edit
+Public Domain images so searching for images in the public domain can be a good
+way to find images for your website.  However, it is still good practice to
+give credit when possible, even for public domain images.
 
 ::::::::::::::::::::::
 
 
-We will continue to use Markdown and learn more throughout the rest of the lesson.
-Though later we will find we need HTML again for some features.
+We will continue to use Skribe and learn more throughout the rest of the lesson.
+
 
 :::::::::::::: callout
 
-## Markdown Cheatsheet
+## Skribe
 
-Markdown offers a variety of formatting features.
-Have a look at this [cheatsheet][github-flavored-markdown] to get an overview or look things up.
+Skribe offers a variety of formatting features.
+Have a look at the [manual](https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user.html#Skribe-User-Manual)
+to get an overview or look things up.
 
 ::::::::::::::::::::::
 
 :::::::::::::: callout
 
-## Markdown Flavours
-The initial description of Markdown was informal and contained certain ambiguities so over the years [different Markdown
-implementations and syntax variations](https://github.com/commonmark/commonmark-spec/wiki/markdown-flavors) (often referred to as "flavours")
-appeared to support various syntax features and extensions. As a consequence, the syntax from one variant may not
-be interpreted as expected in another - you have to be aware which one is being used by a particular platform. Here are
-a few well-known variants:
-  - [GitHub-flavored Markdown][github-flavored-markdown] (used on this lesson and by GitHub)
-  - [GitLab-flavored Markdown][gitlab-flavored-markdown] (used by GitLab)
-  - [Kramdown][kramdown] (a fast, Ruby, open source implementation released under the MIT licence)
+## A note on documents created by Skribe
+
+The basic building blocks used to create a Skribe document are the
+same, but because of its extensibility, you will need to read through
+the code to determine what new functionality has been added to material
+created using Skribe. Do not expect to be able to copy and paste material
+from one Skribe document to another without understanding it and modifying
+it for your needs.
 
 ::::::::::::::::::::::
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Optional Exercise: Add Your Repository Details to CodiMD
+## Optional Exercise: Examine other Haunt sites
 
-If your instructors are using _CodiMD_ (or _HackMD_ or any other Markdown-based shared document platform)
-to take notes during this workshop,
-use Markdown syntax to add a link in that document to the repository you are using
-to follow along with this lesson.
-The link text should be your GitHub username, and the target your repository.
-Your instructors will direct you towards the appropriate location in the
-document to add your link.
+- The [Bootstrapable builds site](http://bootstrappable.org/) is created using
+Haunt and uses Skribe for its posts. Examine the
+[source](https://codeberg.org/guix/bootstrappable).
+- [Karl Hallsby's blog](https://karl.hallsby.com/) is created using Haunt and
+uses [SXML](https://okmij.org/ftp/Scheme/SXML.html) for its posts.
+Examine the [source](https://cgit.karl.hallsby.com/website.git/tree/).
+A brief description of SXML is also available on
+[wikipedia](https://en.wikipedia.org/wiki/SXML)
+
+How do SXML and Skribe differ?
+
+:::::::::::::::::::::::: solution
+
+SXML is a markup language that faciliates using scheme to work with
+XML documents.  Skribe is a document as a program.  Both Skribe and
+SXML can be converted to XML, to take advantage of the powerful
+query, validation and transformation tools available for XML.
+
+:::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::: callout
 
-## More Markdown Features
-Check out our [Extras page on Markdown](../more_markdown/index.html) for a more comprehensive overview of
-Markdown, including how to create fenced code blocks
-and do syntax highlighting for various languages.
+## More Skribe Features
+Check out our [Extras page on Skribe](../more_skribe/index.html) for a more
+comprehensive overview of Skribe, including how to create fenced code blocks,
+do syntax highlighting for various languages and typeset academic papers.
 
 ::::::::::::::::::::::
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- "Markdown is an relatively easy way to write formatted text"
+- "Skribe is a powerful and relatively easy way to write formatted text"
+- "Skribe allows a single source to be output to a variety of formats, including html and pdf"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::

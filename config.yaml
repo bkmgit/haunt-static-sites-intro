@@ -69,13 +69,13 @@ episodes:
 - introduction.Rmd
 - github-pages.Rmd
 - starting-haunt.Rmd
-#- srkibe.Rmd
+- skribe.Rmd
 #- themes.Rmd
 #- layouts.Rmd
 #- filters.Rmd
 #- arrays.Rmd
 #- wrap-up.Rmd
-#- reference.Rmd
+- reference.Rmd
 #- more-skribe.Rmd
 
 # Information for Learners
