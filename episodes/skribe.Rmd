@@ -26,7 +26,7 @@ Plain text characters and parenthesis are used in place of HTML tags.
 These characters are then processed by Haunt (or another script or
 application) and transformed into HTML.  Skribe separates content
 from layout and formatting details which are handled by a program.
-Frequently used elements, like headings, paragraphs, lists, tables 
+Frequently used elements, like headings, paragraphs, lists
 and text formatting (i.e. bold, italic) are part of Skribe.
 Skribe's simplified syntax keeps content human-readable.  Skribe's
 power comes from the ability to use Scheme to automate and customize
@@ -38,7 +38,8 @@ Challenge: Learn more about Skribe
 
 Read through the
 [paper](https://www-sop.inria.fr/members/Manuel.Serrano/publi/jfp05/article.html)
-introducing Skribe.
+introducing Skribe.  Note that some of the annotations used differ from the
+Skribe implementation in Haunt.
 
 - What features make Skribe attractive?
 - What are some output formats that have been programmed to be generated from
@@ -147,15 +148,15 @@ Add the following to your `my-first-post.skr` file.
 
 (h1 [My first post!])
 
-(p [This is a (italic static) website and blog.])
+(p [This is a ,(em static) website and blog.])
 
-(p [It forms the basis of a ,(ref :url "https://carpentries.org/" :text "Carpentries") lesson.])
+(p [It forms the basis of a ,(anchor "Carpentries" "https://carpentries.org/") lesson.])
 
 (p [Some established Carpentries lesson programs are:
- ,(itemize
-   (item Software Carpentry)
-   (item Data Carpentry)
-   (item Library Carpentry))])
+ ,(ol
+   (li Software Carpentry)
+   (li Data Carpentry)
+   (li Library Carpentry))])
 
 (p [The source is written in (bold Skribe), a
     document format that allows you to use
@@ -197,12 +198,12 @@ Let's do an exercise to try out writing more Skribe.
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge: Try Out Skribe
-Use
-[standard markup section of the Skribe user manual](https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user-1.html#Standard-Markups)
+Read through the Haunt
+[Skribe implementation](https://git.dthompson.us/haunt/tree/haunt/skribe/utils.scm)
 to add the following to your `my-first-post.skr`:
 
 - A second level heading
-- Some text under that second level heading that includes a link and <u>underlined</u> text.
+- Some text under that second level heading that includes a link and <b>bold</b> text.
 - A third level heading
 - A numbered list
 - Bonus: Add this image <https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png>
@@ -210,26 +211,26 @@ to add the following to your `my-first-post.skr`:
 :::::::::::::::::::::::: solution
 
 ## Example Solution
-For example your Skribe might add the following:
+For example your might add the following:
 
 ```scheme
 (h2 [More about Skribe])
 
-(p [You can find this lesson ,(ref :url https://bkmgit.github.io/haunt-intro :text here).]
+(p [You can find this lesson ,(anchor "here" "https://bkmgit.github.io/haunt-intro").]
 
 (h3 [Four reasons you should learn Skribe:])
 
-(enumerate
- (item [Less formatting than HTML])
- (item [Easy to read even with formatting])
- (item [Powerful programming environment])
- (item [Allows you to ] (underline "automate") [ the ] (sc "boring") [stuff.]))
+(ol
+ (li [Less formatting than HTML])
+ (li [Easy to read even with formatting])
+ (li [Powerful programming environment])
+ (li [Allows you to ,(em [automate]) the ,(bold [boring]) stuff.]))
 
-(figure :legend "Carpentries Logo" (image file: "/images/TheCarpentries-opengraph.png"))
+(image "/images/thecarpentries-opengraph.png"))
 ```
 
 Where the image file is obtained from 
-https://github.com/carpentries/carpentries.org/raw/main/images/TheCarpentries-opengraph.png)
+https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png
 and placed in the images folder
 
 
@@ -247,22 +248,64 @@ TODO: Add image of generated site
 Up to now, we have used _inline-style_ links which have the URL inline with the description text, for example:
 
 ```scheme
-,(ref :url "https://carpentries.org/" :text "Carpentries")
+,(anchor "Carpentries" "https://carpentries.org/")
 ```
 
 If you use a link more than once, consider using so called _reference-style_ links instead.
-Reference-style links reference the URL via a label.
-The label goes into square brackets `[ ]` right after the description text of the link and
-then later, usually at the bottom of the page, you can connect that label to the url it references to complete the link.
-This looks like:
+Reference-style links reference the URL via a label.  In Haunt, we can write a module
+to accomplish this.  Create a file `links.scm` and within it add
 
 ```scheme
-[Carpentries Webpage][carpentries]
+(define-module (links)
+  #:use-module (haunt skribe utils)
+  #:export (%carpentries))
 
-[carpentries]: https://carpentries.org/
+(define (%carpentries)
+  (anchor "The Carpentries" "https://carpentries.org"))
 ```
 
-and helps to follow the [DRY principle][dry-principle], avoiding redundant specification of information.
+Then modify `posts/my-first-post.skr` to contain
+
+```scheme
+(add-to-load-path "../")
+(use-modules (links))
+
+(post
+ :title "My first post!"
+ :date (make-date* 2025 06 21 09 00)
+ :tags '("Skribe" "scheme" "program")
+
+(h1 [My first post!])
+
+(p [This is a static website and blog.])
+
+(p [The source is written in Skribe, a
+    document format that allows you to use
+    embed scheme programs to create your
+    document.])
+
+(p [1 + 2 + 3 + 4 + 5 = ]
+   (+ 1 2 3 4 5))
+
+(h2 [More about Skribe])
+
+(p [You can find this lesson ,(anchor "here" "https://bkmgit.github.io/haunt-intro").])
+
+(h3 [Four reasons you should learn Skribe:])
+
+(ol
+ (li [Less formatting than HTML])
+ (li [Easy to read even with formatting])
+ (li [Powerful programming environment])
+ (li [Allows you to ,(em [automate]) the ,(strong [boring]) stuff.]))
+
+(p [To find out more about the Carpentries, go to the ,(%carpentries)  website.])
+  
+(image "/images/thecarpentries-opengraph.png"))
+```
+
+This follows the [DRY principle][dry-principle], avoiding redundant
+specification of information.
 
 ::::::::::::::::::::::
 
@@ -288,16 +331,6 @@ We will continue to use Skribe and learn more throughout the rest of the lesson.
 
 :::::::::::::: callout
 
-## Skribe
-
-Skribe offers a variety of formatting features.
-Have a look at the [manual](https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user.html#Skribe-User-Manual)
-to get an overview or look things up.
-
-::::::::::::::::::::::
-
-:::::::::::::: callout
-
 ## A note on documents created by Skribe
 
 The basic building blocks used to create a Skribe document are the
@@ -317,11 +350,14 @@ it for your needs.
 - The [Bootstrapable builds site](http://bootstrappable.org/) is created using
 Haunt and uses Skribe for its posts. Examine the
 [source](https://codeberg.org/guix/bootstrappable).
+- The [ActivityPub site](https://activitypub.rocks) is created using Haunt
+and uses Skribe for its posts. Examine the
+[source](https://gitlab.com/dustyweb/activitypub.rocks).
 - [Karl Hallsby's blog](https://karl.hallsby.com/) is created using Haunt and
 uses [SXML](https://okmij.org/ftp/Scheme/SXML.html) for its posts.
 Examine the [source](https://cgit.karl.hallsby.com/website.git/tree/).
 A brief description of SXML is also available on
-[wikipedia](https://en.wikipedia.org/wiki/SXML)
+[wikipedia](https://en.wikipedia.org/wiki/SXML).
 
 How do SXML and Skribe differ?
 
@@ -341,7 +377,11 @@ query, validation and transformation tools available for XML.
 ## More Skribe Features
 Check out our [Extras page on Skribe](../more_skribe/index.html) for a more
 comprehensive overview of Skribe, including how to create fenced code blocks,
-do syntax highlighting for various languages and typeset academic papers.
+do syntax highlighting for various languages and typeset academic papers. Do
+also examine the discussion on Skribe as used in
+[Skribilo](https://www.nongnu.org/skribilo),
+which more closely follows the original Skribe specification documented in the
+[Skribe manual](https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user.html#Skribe-User-Manual).
 
 ::::::::::::::::::::::
 
