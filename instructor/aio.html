@@ -1058,7 +1058,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-starting-haunt"><p>Content from <a href="starting-haunt.html">Starting With Haunt</a></p>
 <hr>
-<p>Last updated on 2025-06-24 |
+<p>Last updated on 2025-06-27 |
 
         <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/starting-haunt.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1410,11 +1410,15 @@ ways. Let’s experiment with some possible issues that might come up and
 see what happens.</p>
 <p>Try the changes listed below on your <code>my-first-post.skr</code>
 file and see what happens when you try to build the site. You will want
-to correct the previous mistake each time. 1. Remove an opening square
-bracket <code>[</code>. 2. Remove a closing square bracket
-<code>]</code>. 3. Change <code>:tags '(</code> to <code>:tags (</code>.
-4. Change <code>:date</code> to <code>date</code>. 5. Change
-<code>(p [The source</code> to <code>( [The source</code>.</p>
+to correct the previous mistake each time.</p>
+<ol style="list-style-type: decimal">
+<li>Remove an opening square bracket <code>[</code>.</li>
+<li>Remove a closing square bracket <code>]</code>.</li>
+<li>Change <code>:tags '(</code> to <code>:tags (</code>.</li>
+<li>Change <code>:date</code> to <code>date</code>.</li>
+<li>Change <code>(p [The source</code> to
+<code>( [The source</code>.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -1518,7 +1522,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-skribe"><p>Content from <a href="skribe.html">Authoring With Skribe</a></p>
 <hr>
-<p>Last updated on 2025-06-24 |
+<p>Last updated on 2025-06-27 |
 
         <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/skribe.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -1560,8 +1564,8 @@ parenthesis are used in place of HTML tags. These characters are then
 processed by Haunt (or another script or application) and transformed
 into HTML. Skribe separates content from layout and formatting details
 which are handled by a program. Frequently used elements, like headings,
-paragraphs, lists, tables and text formatting (i.e. bold, italic) are
-part of Skribe. Skribe’s simplified syntax keeps content human-readable.
+paragraphs, lists and text formatting (i.e. bold, italic) are part of
+Skribe. Skribe’s simplified syntax keeps content human-readable.
 Skribe’s power comes from the ability to use Scheme to automate and
 customize the websites you create relieving you of tedious repetitive
 work.</p>
@@ -1574,7 +1578,8 @@ work.</p>
 <div class="callout-content">
 <p>Challenge: Learn more about Skribe</p>
 <p>Read through the <a href="https://www-sop.inria.fr/members/Manuel.Serrano/publi/jfp05/article.html" class="external-link">paper</a>
-introducing Skribe.</p>
+introducing Skribe. Note that some of the annotations used differ from
+the Skribe implementation in Haunt.</p>
 <ul>
 <li>What features make Skribe attractive?</li>
 <li>What are some output formats that have been programmed to be
@@ -1688,15 +1693,15 @@ happens when we rebuild the website. Add the following to your
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>(h1 <span class="op">[</span>My first post!<span class="op">]</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>(p <span class="op">[</span>This is a (italic static) website <span class="kw">and</span> blog.<span class="op">]</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>(p <span class="op">[</span>This is a ,(em static) website <span class="kw">and</span> blog.<span class="op">]</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>(p <span class="op">[</span>It forms the basis of a ,(ref :url <span class="st">"https://carpentries.org/"</span> :text <span class="st">"Carpentries"</span>) lesson.<span class="op">]</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>(p <span class="op">[</span>It forms the basis of a ,(anchor <span class="st">"Carpentries"</span> <span class="st">"https://carpentries.org/"</span>) lesson.<span class="op">]</span>)</span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>(p <span class="op">[</span>Some established Carpentries lesson programs are:</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a> ,(itemize</span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>   (item Software Carpentry)</span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>   (item Data Carpentry)</span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>   (item Library Carpentry))<span class="op">]</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a> ,(ol</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>   (li Software Carpentry)</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>   (li Data Carpentry)</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>   (li Library Carpentry))<span class="op">]</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>(p <span class="op">[</span>The source is written in (bold Skribe), a</span>
 <span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>    document format that allows you to use</span>
@@ -1736,13 +1741,13 @@ appropriately.</p>
 <div id="challenge-try-out-skribe" class="callout-inner">
 <h3 class="callout-title">Challenge: Try Out Skribe</h3>
 <div class="callout-content">
-<p>Use <a href="https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user-1.html#Standard-Markups" class="external-link">standard
-markup section of the Skribe user manual</a> to add the following to
-your <code>my-first-post.skr</code>:</p>
+<p>Read through the Haunt <a href="https://git.dthompson.us/haunt/tree/haunt/skribe/utils.scm" class="external-link">Skribe
+implementation</a> to add the following to your
+<code>my-first-post.skr</code>:</p>
 <ul>
 <li>A second level heading</li>
 <li>Some text under that second level heading that includes a link and
-<u>underlined</u> text.</li>
+<b>bold</b> text.</li>
 <li>A third level heading</li>
 <li>A numbered list</li>
 <li>Bonus: Add this image <a href="https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png" class="external-link uri">https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png</a>
@@ -1758,25 +1763,25 @@ your <code>my-first-post.skr</code>:</p>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>For example your Skribe might add the following:</p>
+<p>For example your might add the following:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(ref :url https://bkmgit.github.io/haunt-intro :text here)<span class="op">.]</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span></span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>(enumerate</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a> (item <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a> (item <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> (item <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> (item <span class="op">[</span>Allows you to <span class="op">]</span> (underline <span class="st">"automate"</span>) <span class="op">[</span> the <span class="op">]</span> (sc <span class="st">"boring"</span>) <span class="op">[</span>stuff.<span class="op">]</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>(ol</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the ,(bold <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
 <span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>(figure :legend <span class="st">"Carpentries Logo"</span> (image file: <span class="st">"/images/TheCarpentries-opengraph.png"</span>))</span></code></pre>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
 </div>
-<p>Where the image file is obtained from <a href="https://github.com/carpentries/carpentries.org/raw/main/images/TheCarpentries-opengraph.png" class="external-link uri">https://github.com/carpentries/carpentries.org/raw/main/images/TheCarpentries-opengraph.png</a>)
+<p>Where the image file is obtained from <a href="https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png" class="external-link uri">https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png</a>
 and placed in the images folder</p>
 <p>TODO: Add image of generated site</p>
 </div>
@@ -1795,23 +1800,64 @@ URL inline with the description text, for example:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>,(ref :url <span class="st">"https://carpentries.org/"</span> :text <span class="st">"Carpentries"</span>)</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>,(anchor <span class="st">"Carpentries"</span> <span class="st">"https://carpentries.org/"</span>)</span></code></pre>
 </div>
 <p>If you use a link more than once, consider using so called
 <em>reference-style</em> links instead. Reference-style links reference
-the URL via a label. The label goes into square brackets
-<code>[ ]</code> right after the description text of the link and then
-later, usually at the bottom of the page, you can connect that label to
-the url it references to complete the link. This looks like:</p>
+the URL via a label. In Haunt, we can write a module to accomplish this.
+Create a file <code>links.scm</code> and within it add</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="op">[</span>Carpentries Webpage<span class="op">][</span>carpentries<span class="op">]</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="op">[</span>carpentries<span class="op">]</span>: https://carpentries.org/</span></code></pre>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>(<span class="ex">define-module</span><span class="fu"> </span>(links)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  #:use-module (haunt skribe utils)</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  #:export (%carpentries))</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> </span>(%carpentries)</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  (anchor <span class="st">"The Carpentries"</span> <span class="st">"https://carpentries.org"</span>))</span></code></pre>
 </div>
-<p>and helps to follow the [DRY principle][dry-principle], avoiding
-redundant specification of information.</p>
+<p>Then modify <code>posts/my-first-post.skr</code> to contain</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>(add-to-load-path <span class="st">"../"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>(use-modules (links))</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>(post</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a> :title <span class="st">"My first post!"</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a> :date (make-date* <span class="dv">2025</span> <span class="dv">06</span> <span class="dv">21</span> <span class="dv">09</span> <span class="dv">00</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a> :tags '(<span class="st">"Skribe"</span> <span class="st">"scheme"</span> <span class="st">"program"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>(h1 <span class="op">[</span>My first post!<span class="op">]</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>(p <span class="op">[</span>This is a static website <span class="kw">and</span> blog.<span class="op">]</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>(p <span class="op">[</span>The source is written in Skribe, a</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>    document format that allows you to use</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>    embed scheme programs to create your</span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>    document.<span class="op">]</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>(p <span class="op">[</span><span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">=</span> <span class="op">]</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>   (<span class="op">+</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span>))</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>(ol</span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the ,(strong <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>(p <span class="op">[</span>To <span class="kw">find</span> out more about the Carpentries, go to the ,(%carpentries)  website.<span class="op">]</span>)</span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a>  </span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
+</div>
+<p>This follows the [DRY principle][dry-principle], avoiding redundant
+specification of information.</p>
 </div>
 </div>
 </div>
@@ -1837,18 +1883,6 @@ credit when possible, even for public domain images.</p>
 </div>
 <p>We will continue to use Skribe and learn more throughout the rest of
 the lesson.</p>
-<div id="skribe-1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="skribe-1" class="callout-inner">
-<h3 class="callout-title">Skribe</h3>
-<div class="callout-content">
-<p>Skribe offers a variety of formatting features. Have a look at the <a href="https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user.html#Skribe-User-Manual" class="external-link">manual</a>
-to get an overview or look things up.</p>
-</div>
-</div>
-</div>
 <div id="a-note-on-documents-created-by-skribe" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1876,12 +1910,13 @@ and modifying it for your needs.</p>
 <li>The <a href="http://bootstrappable.org/" class="external-link">Bootstrapable builds
 site</a> is created using Haunt and uses Skribe for its posts. Examine
 the <a href="https://codeberg.org/guix/bootstrappable" class="external-link">source</a>.</li>
+<li>The <a href="https://activitypub.rocks" class="external-link">ActivityPub site</a> is
+created using Haunt and uses Skribe for its posts. Examine the <a href="https://gitlab.com/dustyweb/activitypub.rocks" class="external-link">source</a>.</li>
 <li>
 <a href="https://karl.hallsby.com/" class="external-link">Karl Hallsby’s blog</a> is
 created using Haunt and uses <a href="https://okmij.org/ftp/Scheme/SXML.html" class="external-link">SXML</a> for its posts.
 Examine the <a href="https://cgit.karl.hallsby.com/website.git/tree/" class="external-link">source</a>. A
-brief description of SXML is also available on <a href="https://en.wikipedia.org/wiki/SXML" class="external-link">wikipedia</a>
-</li>
+brief description of SXML is also available on <a href="https://en.wikipedia.org/wiki/SXML" class="external-link">wikipedia</a>.</li>
 </ul>
 <p>How do SXML and Skribe differ?</p>
 </div>
@@ -1912,7 +1947,11 @@ validation and transformation tools available for XML.</p>
 <p>Check out our <a href="../more_skribe/index.html">Extras page on
 Skribe</a> for a more comprehensive overview of Skribe, including how to
 create fenced code blocks, do syntax highlighting for various languages
-and typeset academic papers.</p>
+and typeset academic papers. Do also examine the discussion on Skribe as
+used in <a href="https://www.nongnu.org/skribilo" class="external-link">Skribilo</a>, which
+more closely follows the original Skribe specification documented in the
+<a href="https://www-sop.inria.fr/mimosa/fp/Skribe/doc/user.html#Skribe-User-Manual" class="external-link">Skribe
+manual</a>.</p>
 </div>
 </div>
 </div>
@@ -2017,8 +2056,8 @@ any links that you are not going to use.
   "url": "https://bkmgit.github.io/haunt-static-sites-intro/instructor/aio.html",
   "identifier": "https://bkmgit.github.io/haunt-static-sites-intro/instructor/aio.html",
   "dateCreated": "2025-06-18",
-  "dateModified": "2025-06-24",
-  "datePublished": "2025-06-24"
+  "dateModified": "2025-06-27",
+  "datePublished": "2025-06-27"
 }
 
   </script><script>
