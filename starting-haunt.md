@@ -321,6 +321,7 @@ happens.
 Try the changes listed below on your `my-first-post.skr` file and see what
 happens when you try to build the site. You will want to correct the previous
 mistake each time.
+
 1. Remove an opening square bracket `[`.
 2. Remove a closing square bracket `]`.
 3. Change `:tags '(` to `:tags (`.
