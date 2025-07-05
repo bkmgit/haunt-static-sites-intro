@@ -70,7 +70,7 @@ episodes:
 - github-pages.Rmd
 - starting-haunt.Rmd
 - skribe.Rmd
-#- themes.Rmd
+- reusing-content.Rmd
 #- layouts.Rmd
 #- filters.Rmd
 #- arrays.Rmd

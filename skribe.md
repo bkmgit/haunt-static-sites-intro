@@ -5,7 +5,6 @@ exercises: 15
 ---
 
 
-
 :::::::::::::::::::::::::::::::::::::: questions
 
 - "How can I write content for my webpages?"
@@ -129,11 +128,13 @@ Skribe features.
 
 Our `my-first-post.skr` already contains vanilla text and
 three formatting features:
+
 - Heading `(h1 [My first post!])`
 - Paragraph `(p [This is a static website and blog.])`
 - Emphasis using `(bold Skribe)`.
 
 Additionally it shows how to evaluate a scheme expression:
+
 - `(+ 1 2 3 4 5)
 
 Let's learn some more Skribe by adding some formatting and 
@@ -206,7 +207,7 @@ to add the following to your `my-first-post.skr`:
 - Some text under that second level heading that includes a link and <b>bold</b> text.
 - A third level heading
 - A numbered list
-- Bonus: Add this image <https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png>
+- Bonus: Add this image <https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png>
 
 :::::::::::::::::::::::: solution
 
@@ -216,7 +217,8 @@ For example your might add the following:
 ```scheme
 (h2 [More about Skribe])
 
-(p [You can find this lesson ,(anchor "here" "https://bkmgit.github.io/haunt-intro").]
+(p [You can find this lesson
+    ,(anchor "here" "https://bkmgit.github.io/haunt-intro").]
 
 (h3 [Four reasons you should learn Skribe:])
 
@@ -224,7 +226,8 @@ For example your might add the following:
  (li [Less formatting than HTML])
  (li [Easy to read even with formatting])
  (li [Powerful programming environment])
- (li [Allows you to ,(em [automate]) the ,(bold [boring]) stuff.]))
+ (li [Allows you to ,(em [automate]) the
+      ,(bold [boring]) stuff.]))
 
 (image "/images/thecarpentries-opengraph.png"))
 ```
@@ -289,7 +292,8 @@ Then modify `posts/my-first-post.skr` to contain
 
 (h2 [More about Skribe])
 
-(p [You can find this lesson ,(anchor "here" "https://bkmgit.github.io/haunt-intro").])
+(p [You can find this lesson
+    ,(anchor "here" "https://bkmgit.github.io/haunt-intro").])
 
 (h3 [Four reasons you should learn Skribe:])
 
@@ -297,15 +301,18 @@ Then modify `posts/my-first-post.skr` to contain
  (li [Less formatting than HTML])
  (li [Easy to read even with formatting])
  (li [Powerful programming environment])
- (li [Allows you to ,(em [automate]) the ,(strong [boring]) stuff.]))
+ (li [Allows you to ,(em [automate]) the
+      ,(strong [boring]) stuff.]))
 
-(p [To find out more about the Carpentries, go to the ,(%carpentries)  website.])
+(p [To find out more about the Carpentries,
+    go to the ,(%carpentries)  website.])
   
 (image "/images/thecarpentries-opengraph.png"))
 ```
 
-This follows the [DRY principle][dry-principle], avoiding redundant
-specification of information.
+This follows the
+[DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself),
+avoiding redundant specification of information.
 
 ::::::::::::::::::::::
 
@@ -363,7 +370,7 @@ How do SXML and Skribe differ?
 
 :::::::::::::::::::::::: solution
 
-SXML is a markup language that faciliates using scheme to work with
+SXML is a markup language that faciliates using Scheme to work with
 XML documents.  Skribe is a document as a program.  Both Skribe and
 SXML can be converted to XML, to take advantage of the powerful
 query, validation and transformation tools available for XML.
