@@ -117,11 +117,11 @@
   Building Static Websites with Haunt
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 76%" class="percentage">
-    76%
+<aside class="col-md-12 lesson-progress"><div style="width: 50%" class="percentage">
+    50%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 76%" aria-valuenow="76" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 50%" aria-valuenow="50" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -245,7 +245,16 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="reference.html">5. References</a>
+        <a href="reusing-content.html">5. Reusing Blocks of Content</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="reference.html">6. References</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -294,7 +303,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="starting-haunt.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="reference.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="reusing-content.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -302,14 +311,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Starting With Haunt
         </a>
-        <a class="chapter-link float-end" href="reference.html" rel="next">
-          Next: References...
+        <a class="chapter-link float-end" href="reusing-content.html" rel="next">
+          Next: Reusing Blocks of...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Authoring With Skribe</h1>
-        <p>Last updated on 2025-06-27 |
+        <p>Last updated on 2025-07-05 |
 
         <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/skribe.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -456,12 +465,15 @@ website to rebuild then view the website.</p>
 projects <code>my-first-post.skr</code> we can use it as a text editor
 and investigate selected Skribe features.</p>
 <p>Our <code>my-first-post.skr</code> already contains vanilla text and
-three formatting features: - Heading <code>(h1 [My first post!])</code>
-- Paragraph <code>(p [This is a static website and blog.])</code> -
-Emphasis using <code>(bold Skribe)</code>.</p>
-<p>Additionally it shows how to evaluate a scheme expression: - `(+ 1 2
-3 4 5)</p>
-<p>Let’s learn some more Skribe by adding some formatting and see what
+three formatting features:</p>
+<ul><li>Heading <code>(h1 [My first post!])</code>
+</li>
+<li>Paragraph <code>(p [This is a static website and blog.])</code>
+</li>
+<li>Emphasis using <code>(bold Skribe)</code>.</li>
+</ul><p>Additionally it shows how to evaluate a scheme expression:</p>
+<ul><li>`(+ 1 2 3 4 5)</li>
+</ul><p>Let’s learn some more Skribe by adding some formatting and see what
 happens when we rebuild the website. Add the following to your
 <code>my-first-post.skr</code> file.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -530,7 +542,7 @@ implementation</a> to add the following to your
 <b>bold</b> text.</li>
 <li>A third level heading</li>
 <li>A numbered list</li>
-<li>Bonus: Add this image <a href="https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png" class="external-link uri">https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png</a>
+<li>Bonus: Add this image <a href="https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png" class="external-link uri">https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png</a>
 </li>
 </ul></div>
 </div>
@@ -548,17 +560,19 @@ implementation</a> to add the following to your
 </h3>
 <pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>(ol</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the ,(bold <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>    ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>(ol</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>      ,(bold <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
 </div>
 <p>Where the image file is obtained from <a href="https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png" class="external-link uri">https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png</a>
 and placed in the images folder</p>
@@ -621,22 +635,25 @@ Create a file <code>links.scm</code> and within it add</p>
 <span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a></span>
 <span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
 <span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span>)</span>
-<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
-<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a></span>
-<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>(ol</span>
-<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
-<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
-<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
-<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the ,(strong <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
-<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a></span>
-<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>(p <span class="op">[</span>To <span class="kw">find</span> out more about the Carpentries, go to the ,(%carpentries)  website.<span class="op">]</span>)</span>
-<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a>  </span>
-<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>    ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a>(ol</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the</span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>      ,(strong <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>(p <span class="op">[</span>To <span class="kw">find</span> out more about the Carpentries,</span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a>    go to the ,(%carpentries)  website.<span class="op">]</span>)</span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a>  </span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
 </div>
-<p>This follows the [DRY principle][dry-principle], avoiding redundant
-specification of information.</p>
+<p>This follows the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" class="external-link">DRY
+principle</a>, avoiding redundant specification of information.</p>
 </div>
 </div>
 </div>
@@ -706,7 +723,7 @@ brief description of SXML is also available on <a href="https://en.wikipedia.org
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<p>SXML is a markup language that faciliates using scheme to work with
+<p>SXML is a markup language that faciliates using Scheme to work with
 XML documents. Skribe is a document as a program. Both Skribe and SXML
 can be converted to XML, to take advantage of the powerful query,
 validation and transformation tools available for XML.</p>
@@ -757,7 +774,7 @@ any links that you are not going to use.
       </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="starting-haunt.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="reference.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="reusing-content.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -765,8 +782,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Starting With Haunt
         </a>
-        <a class="chapter-link float-end" href="reference.html" rel="next">
-          Next: References...
+        <a class="chapter-link float-end" href="reusing-content.html" rel="next">
+          Next: Reusing Blocks of...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -812,8 +829,8 @@ any links that you are not going to use.
   "url": "https://bkmgit.github.io/haunt-static-sites-intro/skribe.html",
   "identifier": "https://bkmgit.github.io/haunt-static-sites-intro/skribe.html",
   "dateCreated": "2025-06-18",
-  "dateModified": "2025-06-27",
-  "datePublished": "2025-07-01"
+  "dateModified": "2025-07-05",
+  "datePublished": "2025-07-05"
 }
 
   </script><script>

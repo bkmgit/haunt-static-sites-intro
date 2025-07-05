@@ -292,7 +292,19 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="reference.html">5. References</a>
+        <a href="reusing-content.html">5. Reusing Blocks of Content</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="reference.html">6. References</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -1522,7 +1534,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-skribe"><p>Content from <a href="skribe.html">Authoring With Skribe</a></p>
 <hr>
-<p>Last updated on 2025-06-27 |
+<p>Last updated on 2025-07-05 |
 
         <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/skribe.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -1675,11 +1687,18 @@ website to rebuild then view the website.</p>
 projects <code>my-first-post.skr</code> we can use it as a text editor
 and investigate selected Skribe features.</p>
 <p>Our <code>my-first-post.skr</code> already contains vanilla text and
-three formatting features: - Heading <code>(h1 [My first post!])</code>
-- Paragraph <code>(p [This is a static website and blog.])</code> -
-Emphasis using <code>(bold Skribe)</code>.</p>
-<p>Additionally it shows how to evaluate a scheme expression: - `(+ 1 2
-3 4 5)</p>
+three formatting features:</p>
+<ul>
+<li>Heading <code>(h1 [My first post!])</code>
+</li>
+<li>Paragraph <code>(p [This is a static website and blog.])</code>
+</li>
+<li>Emphasis using <code>(bold Skribe)</code>.</li>
+</ul>
+<p>Additionally it shows how to evaluate a scheme expression:</p>
+<ul>
+<li>`(+ 1 2 3 4 5)</li>
+</ul>
 <p>Let’s learn some more Skribe by adding some formatting and see what
 happens when we rebuild the website. Add the following to your
 <code>my-first-post.skr</code> file.</p>
@@ -1750,7 +1769,7 @@ implementation</a> to add the following to your
 <b>bold</b> text.</li>
 <li>A third level heading</li>
 <li>A numbered list</li>
-<li>Bonus: Add this image <a href="https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png" class="external-link uri">https://raw.githubusercontent.com/carpentries/carpentries.org/main/images/TheCarpentries-opengraph.png</a>
+<li>Bonus: Add this image <a href="https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png" class="external-link uri">https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png</a>
 </li>
 </ul>
 </div>
@@ -1769,17 +1788,19 @@ implementation</a> to add the following to your
 </h3>
 <pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>(ol</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the ,(bold <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>    ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>(ol</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>      ,(bold <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
 </div>
 <p>Where the image file is obtained from <a href="https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png" class="external-link uri">https://github.com/carpentries/carpentries.org/blob/main/static/thecarpentries-opengraph.png</a>
 and placed in the images folder</p>
@@ -1842,22 +1863,25 @@ Create a file <code>links.scm</code> and within it add</p>
 <span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a></span>
 <span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
 <span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span>)</span>
-<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
-<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a></span>
-<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>(ol</span>
-<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
-<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
-<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
-<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the ,(strong <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
-<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a></span>
-<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>(p <span class="op">[</span>To <span class="kw">find</span> out more about the Carpentries, go to the ,(%carpentries)  website.<span class="op">]</span>)</span>
-<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a>  </span>
-<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>    ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a>(ol</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the</span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>      ,(strong <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>(p <span class="op">[</span>To <span class="kw">find</span> out more about the Carpentries,</span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a>    go to the ,(%carpentries)  website.<span class="op">]</span>)</span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a>  </span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
 </div>
-<p>This follows the [DRY principle][dry-principle], avoiding redundant
-specification of information.</p>
+<p>This follows the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" class="external-link">DRY
+principle</a>, avoiding redundant specification of information.</p>
 </div>
 </div>
 </div>
@@ -1929,7 +1953,7 @@ brief description of SXML is also available on <a href="https://en.wikipedia.org
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<p>SXML is a markup language that faciliates using scheme to work with
+<p>SXML is a markup language that faciliates using Scheme to work with
 XML documents. Skribe is a document as a program. Both Skribe and SXML
 can be converted to XML, to take advantage of the powerful query,
 validation and transformation tools available for XML.</p>
@@ -1975,7 +1999,341 @@ including html and pdf”</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div></section><section id="aio-reference"><p>Content from <a href="reference.html">References</a></p>
+</div></section><section id="aio-reusing-content"><p>Content from <a href="reusing-content.html">Reusing Blocks of Content</a></p>
+<hr>
+<p>Last updated on 2025-07-05 |
+
+        <a href="https://github.com/bkmgit/haunt-static-sites-intro/edit/main/episodes/reusing-content.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 75 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>“How can I reuse the same chunks of material in multiple
+pages?”</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>“Create reusable blocks of content and insert them into pages”</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In the previous episode, we discussed the benefits of creating a file
+with commonly use links to enable us to reuse these throughout our
+pages. However, repeated use of content in and across websites is
+usually not limited to individual values such as website links.</p>
+<div id="challenge-what-gets-reused" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-what-gets-reused" class="callout-inner">
+<h3 class="callout-title">Challenge: What Gets Reused?</h3>
+<div class="callout-content">
+<p>Look at the three pages linked below, and browse some other pages on
+the same site.</p>
+<ul>
+<li><a href="https://www.bootstrappable.org/" class="external-link">Bootstrappable
+Builds</a></li>
+<li>[Karl Halsby][karl-halsby]</li>
+<li><a href="https://g0v.tw" class="external-link">g0v.tw</a></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>What content is being reused between pages on these sites?</li>
+<li>Pair up and compare your partner’s notes with your own.</li>
+<li>Can you identify any common type(s) of content that is being reused
+in these sites?</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>The Bootstrappable Builds website reuses many structural elements,
+such as the <strong>page header</strong> (containing the menu and the
+logo) and <strong>footer</strong> (containing licensing information,
+links to contact the maintainers and the source code).</p>
+<p>Karl Halsby’s site has the same kind of shared header and footer on
+each page: this is a common theme across most websites, helping to
+improve navigation and other aspects of the user experience and achieve
+consistent “branding” across the whole site.</p>
+<p>g0v.tw has shared headers and footers, although the main landing page
+does not have the sharedheader. The site is available in three languages
+and images are reused between the translated pages. Not all pages are
+translated though.</p>
+</div>
+</div>
+</div>
+</div>
+<p>The most commonly reused content is structural: menus and branding
+information used to present a consistent and recognisable interface to
+the user regardless of which specific page of the site they’re visiting.
+We’ll look more at that in the next episode. But some content, such as
+contact statements and post/product listings, can be reused in the body
+of pages. The motivation for reusing content like this is that, if you
+need to update that content - changing the contact address, updating a
+price or picture associated with a listing, and so on - you need only
+change this information in one place for the update to be propagated
+across the whole site. This is related to the <strong>DRY</strong>
+(Don’t Repeat Yourself) principle of good practice in programming.</p>
+<div id="dry-dont-repeat-yourself-principle" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="dry-dont-repeat-yourself-principle" class="callout-inner">
+<h3 class="callout-title">
+<strong>DRY</strong> (Don’t Repeat Yourself)
+Principle</h3>
+<div class="callout-content">
+<p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" class="external-link">DRY
+principle</a> is one of the basic principles of software development
+aimed at reducing repetition of information.</p>
+</div>
+</div>
+</div>
+<p>Two of the three sites linked in the previous exercise are built with
+Haunt. But the principles behind reusing content apply regardless of the
+particular framework being used to build the site.</p>
+<section><h2 class="section-heading" id="reusing-site-footer">Reusing Site Footer<a class="anchor" aria-label="anchor" href="#reusing-site-footer"></a>
+</h2>
+<hr class="half-width">
+<p>Let’s look at an example of how we can create a block of common
+content and reuse it in multiple pages on our site. Websites typically
+have some text and links at the bottom of each page to help visitors
+with links to privacy information, site source code and site licensing
+information. To make these links appear above every page on our site, we
+could add the same code at the end of each skribe file in our
+repository. But if we wanted to modify this information, we would need
+to make the same adjustment on every page. This is both time-consuming
+and error-prone: it would be easy to accidentally mistype a link or
+forget to update one of the files. Instead, we can go some way to avoid
+this hassle by using some magic that Haunt provides:
+<code>programmability</code>.</p>
+<p>To demonstrate this, we will modify the <code>haunt.scm</code> file
+to add a footer to each page.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>(use-modules (haunt asset)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>             (haunt builder blog)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>             (haunt builder atom)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>             (haunt builder assets)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>	    (haunt builder flat-pages)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>             (haunt builder redirects)</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>             (haunt builder rss)</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>	    (haunt html)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>	    (haunt page)</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>	    (haunt post)</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>	    (haunt reader)</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>             (haunt reader skribe)</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>             (haunt reader texinfo)</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>             (haunt reader commonmark)</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>             (haunt site)</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>	    (srfi srfi-19))</span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> footer</span></span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>  `(footer</span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a>    (p <span class="st">"Made with "</span></span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>       (a (@ (href <span class="st">"https://dthompson.us/projects/haunt.html"</span>))</span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1"></a>	 <span class="st">"Haunt"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" tabindex="-1"></a>       <span class="st">"."</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" tabindex="-1"></a>    (p <span class="st">"Subscribe to "</span></span>
+<span id="cb1-25"><a href="#cb1-25" tabindex="-1"></a>       (a (@ (href <span class="st">"/feed.xml"</span>)) <span class="st">"atom"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" tabindex="-1"></a>       <span class="st">" or "</span></span>
+<span id="cb1-27"><a href="#cb1-27" tabindex="-1"></a>       (a (@ (href <span class="st">"/rss-feed.xml"</span>)) <span class="st">"rss"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" tabindex="-1"></a>       <span class="st">" feeds."</span>)))</span>
+<span id="cb1-29"><a href="#cb1-29" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> demo-theme</span></span>
+<span id="cb1-31"><a href="#cb1-31" tabindex="-1"></a>  (theme #:name <span class="st">"demo-theme"</span></span>
+<span id="cb1-32"><a href="#cb1-32" tabindex="-1"></a>	#:layout</span>
+<span id="cb1-33"><a href="#cb1-33" tabindex="-1"></a>	(<span class="kw">lambda</span> (site title body)</span>
+<span id="cb1-34"><a href="#cb1-34" tabindex="-1"></a>	  `((doctype <span class="st">"html"</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" tabindex="-1"></a>		     (head</span>
+<span id="cb1-36"><a href="#cb1-36" tabindex="-1"></a>		      (meta (@ (http-equiv <span class="st">"Content-Type"</span>) (content <span class="st">"text/html; charset=UTF-8"</span>)))</span>
+<span id="cb1-37"><a href="#cb1-37" tabindex="-1"></a>		      (meta (@ (http-equiv <span class="st">"Content-Language"</span>) (content <span class="st">"en"</span>)))</span>
+<span id="cb1-38"><a href="#cb1-38" tabindex="-1"></a>		      (meta (@ (name <span class="st">"viewport"</span>) (content <span class="st">"width=device-width"</span>)))</span>
+<span id="cb1-39"><a href="#cb1-39" tabindex="-1"></a>		      (title ,(<span class="kw">string-append</span> title <span class="st">" - "</span> (site-title site)))</span>
+<span id="cb1-40"><a href="#cb1-40" tabindex="-1"></a>		      (link (@ (rel <span class="st">"alternate"</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" tabindex="-1"></a>				(type <span class="st">"application/atom+xml"</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" tabindex="-1"></a>				(title <span class="st">"Atom feed"</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" tabindex="-1"></a>				(href <span class="st">"/feed.xml"</span>))))</span>
+<span id="cb1-44"><a href="#cb1-44" tabindex="-1"></a>		     (body (@ (id <span class="st">"page"</span>))</span>
+<span id="cb1-45"><a href="#cb1-45" tabindex="-1"></a>			   (<span class="kw">div</span> (@ (id <span class="st">"content"</span>))</span>
+<span id="cb1-46"><a href="#cb1-46" tabindex="-1"></a>				,body))</span>
+<span id="cb1-47"><a href="#cb1-47" tabindex="-1"></a>		     ,footer))</span>
+<span id="cb1-48"><a href="#cb1-48" tabindex="-1"></a>	#:post-template</span>
+<span id="cb1-49"><a href="#cb1-49" tabindex="-1"></a>	(<span class="kw">lambda</span> (post)</span>
+<span id="cb1-50"><a href="#cb1-50" tabindex="-1"></a>	  `((article</span>
+<span id="cb1-51"><a href="#cb1-51" tabindex="-1"></a>	     (h1 (@ (id <span class="st">"title"</span>)) ,(post-ref post 'title))</span>
+<span id="cb1-52"><a href="#cb1-52" tabindex="-1"></a>	     (<span class="kw">div</span> (@ (id <span class="st">"date"</span>)) ,(date-&gt;string (post-date post) <span class="st">"~B ~d, ~Y"</span>))</span>
+<span id="cb1-53"><a href="#cb1-53" tabindex="-1"></a>	     (<span class="kw">div</span> (@ (id <span class="st">"post"</span>)) ,(post-sxml post)))))</span>
+<span id="cb1-54"><a href="#cb1-54" tabindex="-1"></a>	#:collection-template</span>
+<span id="cb1-55"><a href="#cb1-55" tabindex="-1"></a>	(<span class="kw">lambda</span> (site title posts prefix)</span>
+<span id="cb1-56"><a href="#cb1-56" tabindex="-1"></a>	  (<span class="ex">define</span><span class="fu"> </span>(post-uri post)</span>
+<span id="cb1-57"><a href="#cb1-57" tabindex="-1"></a>	    (<span class="kw">string-append</span> prefix <span class="st">"/"</span> (site-post-slug site post) <span class="st">".html"</span>))</span>
+<span id="cb1-58"><a href="#cb1-58" tabindex="-1"></a>	  `((h1 ,title)</span>
+<span id="cb1-59"><a href="#cb1-59" tabindex="-1"></a>	    (p (ul (@ (id <span class="st">"posts"</span>))</span>
+<span id="cb1-60"><a href="#cb1-60" tabindex="-1"></a>		   ,@(map (<span class="kw">lambda</span> (post)</span>
+<span id="cb1-61"><a href="#cb1-61" tabindex="-1"></a>			    `(li</span>
+<span id="cb1-62"><a href="#cb1-62" tabindex="-1"></a>			      (a (@ (href ,(post-uri post)))</span>
+<span id="cb1-63"><a href="#cb1-63" tabindex="-1"></a>				 ,(post-ref post 'title))))</span>
+<span id="cb1-64"><a href="#cb1-64" tabindex="-1"></a>			  posts)))))))</span>
+<span id="cb1-65"><a href="#cb1-65" tabindex="-1"></a>   </span>
+<span id="cb1-66"><a href="#cb1-66" tabindex="-1"></a>(site #:title <span class="st">"Built with Haunt, a Scheme Static Site generator"</span></span>
+<span id="cb1-67"><a href="#cb1-67" tabindex="-1"></a>      #:domain <span class="st">"bkmgit.github.io"</span></span>
+<span id="cb1-68"><a href="#cb1-68" tabindex="-1"></a>      #:build-directory <span class="st">"docs"</span></span>
+<span id="cb1-69"><a href="#cb1-69" tabindex="-1"></a>      #:default-metadata</span>
+<span id="cb1-70"><a href="#cb1-70" tabindex="-1"></a>      '((author <span class="op">.</span> <span class="st">"A.N. Other"</span>)</span>
+<span id="cb1-71"><a href="#cb1-71" tabindex="-1"></a>        (email  <span class="op">.</span> <span class="st">"ano@contact.me"</span>))</span>
+<span id="cb1-72"><a href="#cb1-72" tabindex="-1"></a>      #:readers (<span class="kw">list</span> commonmark-reader texinfo-reader skribe-reader sxml-reader html-reader)</span>
+<span id="cb1-73"><a href="#cb1-73" tabindex="-1"></a>      #:builders (<span class="kw">list</span> (blog #:theme demo-theme)</span>
+<span id="cb1-74"><a href="#cb1-74" tabindex="-1"></a>                       (atom-feed)</span>
+<span id="cb1-75"><a href="#cb1-75" tabindex="-1"></a>                       (atom-feeds-by-tag)</span>
+<span id="cb1-76"><a href="#cb1-76" tabindex="-1"></a>                       (rss-feed)</span>
+<span id="cb1-77"><a href="#cb1-77" tabindex="-1"></a>                       (static-directory <span class="st">"images"</span>)))</span></code></pre>
+</div>
+<p>Commit your changes and once the site has built preview it. Notice
+that the landing page is fine, but the linked blog post has the title
+twice. To fix this, modify the blog post file so that the title is not
+in the top of the blog post, but is instead inserted by the template
+from the metadata.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(add-to-load-path <span class="st">"../"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>(use-modules (links))</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>(post</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a> :title <span class="st">"My first post!"</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a> :date (make-date* <span class="dv">2025</span> <span class="dv">06</span> <span class="dv">21</span> <span class="dv">09</span> <span class="dv">00</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a> :tags '(<span class="st">"Skribe"</span> <span class="st">"scheme"</span> <span class="st">"program"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>(p <span class="op">[</span>This is a static website <span class="kw">and</span> blog.<span class="op">]</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a>(p <span class="op">[</span>The source is written in Skribe, a</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>    document format that allows you to use</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>    embed scheme programs to create your</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>    document.<span class="op">]</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>(p <span class="op">[</span><span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">=</span> <span class="op">]</span></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>   (<span class="op">+</span> <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span>))</span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>(h2 <span class="op">[</span>More about Skribe<span class="op">]</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>(p <span class="op">[</span>You can <span class="kw">find</span> this lesson ,(anchor <span class="st">"here"</span> <span class="st">"https://bkmgit.github.io/haunt-intro"</span>)<span class="op">.]</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>(h3 <span class="op">[</span>Four reasons you should learn Skribe:<span class="op">]</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a>(ol</span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a> (li <span class="op">[</span>Less formatting than HTML<span class="op">]</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a> (li <span class="op">[</span>Easy to <span class="kw">read</span> even with formatting<span class="op">]</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a> (li <span class="op">[</span>Powerful programming environment<span class="op">]</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" tabindex="-1"></a> (li <span class="op">[</span>Allows you to ,(em <span class="op">[</span>automate<span class="op">]</span>) the ,(strong <span class="op">[</span>boring<span class="op">]</span>) stuff.<span class="op">]</span>))</span>
+<span id="cb2-30"><a href="#cb2-30" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" tabindex="-1"></a>(p <span class="op">[</span>To <span class="kw">find</span> out more about the Carpentries, go to the ,(%carpentries)  website.<span class="op">]</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" tabindex="-1"></a>  </span>
+<span id="cb2-33"><a href="#cb2-33" tabindex="-1"></a>(image <span class="st">"/images/thecarpentries-opengraph.png"</span>))</span></code></pre>
+</div>
+<p>Commit your changes, wait for the site to build and then refresh the
+page where the blog post is rendered. There shoul now only be one
+title.</p>
+<p>TODO: Add image</p>
+<div id="challenge-add-content-licensing-information" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-add-content-licensing-information" class="callout-inner">
+<h3 class="callout-title">Challenge: Add content licensing information</h3>
+<div class="callout-content">
+<p>The repository has a license for the code used to generate it, but
+not for the content. <a href="https://creativecommons.org/" class="external-link">Creative
+commons</a> has a list of licenses for sharing content. They have a <a href="https://creativecommons.org/share-your-work/" class="external-link">guide</a> to enable
+you to choose an appropriate license to share your work. Follow the <a href="https://creativecommons.org/share-your-work/" class="external-link">guide</a> to choose
+a license and add it to your footer.</p>
+<p>You might also consider using a creative commons license specific to
+your country or available in the language of your blog. A list of
+Creative Commons affiliates is available on the <a href="https://wiki.creativecommons.org/wiki/Category:CC_Affiliate_Locale" class="external-link">Creative
+Commons wiki</a>, check if a more suitable license is available for your
+content.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Modify the footer section in <code>haunt.scm</code> so that it is
+now:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">SCHEME<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode scheme" tabindex="0"><code class="sourceCode scheme"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>(<span class="ex">define</span><span class="fu"> footer</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  `(footer</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>    (p <span class="st">"Made with "</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>       (a (@ (href <span class="st">"https://dthompson.us/projects/haunt.html"</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>          <span class="st">"Haunt"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>       <span class="st">"."</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    (p <span class="st">"Content available under "</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>       (a (@ (href <span class="st">"https://creativecommons.org/licenses/by-sa/4.0/"</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>          <span class="st">"Creative Commons Attribution-ShareAlike 4.0 International"</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>       <span class="st">" License."</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    (p <span class="st">"Subscribe to "</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>       (a (@ (href <span class="st">"/feed.xml"</span>)) <span class="st">"atom"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>       <span class="st">" or "</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>       (a (@ (href <span class="st">"/rss-feed.xml"</span>)) <span class="st">"rss"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>       <span class="st">" feeds."</span>)))</span></code></pre>
+</div>
+<p>TODO: Add image</p>
+</div>
+</div>
+</div>
+</div>
+<p>This is another example of how we can create a block of common
+content and reuse it in multiple pages on our site.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>“Programming is like a bicycle for the mind, it can increase our
+efficiency”</li>
+<li>“Choose licensing information for your content appropriately”</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-reference"><p>Content from <a href="reference.html">References</a></p>
 <hr>
 <p>Last updated on 2025-06-24 |
 
@@ -2056,8 +2414,8 @@ any links that you are not going to use.
   "url": "https://bkmgit.github.io/haunt-static-sites-intro/instructor/aio.html",
   "identifier": "https://bkmgit.github.io/haunt-static-sites-intro/instructor/aio.html",
   "dateCreated": "2025-06-18",
-  "dateModified": "2025-07-01",
-  "datePublished": "2025-07-01"
+  "dateModified": "2025-07-05",
+  "datePublished": "2025-07-05"
 }
 
   </script><script>
